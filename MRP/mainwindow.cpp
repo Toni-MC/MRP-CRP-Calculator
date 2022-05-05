@@ -55,12 +55,12 @@ void MainWindow::on_Ejecutar_clicked()
 }
 
 void MainWindow::PF(){
-    int n = QInputDialog::getInt(this,"Número de periodos","Introduce un número entre 1 y 8",1,1,8);
-    int cont = 0, suma = 0, casilla = 1, i;
-    list<int> dato = NN, prueba;
+    int n = QInputDialog::getInt(this,"Número de periodos","Introduce un número entre 2 y 8",2,2,8);
+    int cont = 0, suma = 0, casilla = 1, i, a = 0;
+    list<int> prueba, prueba2;
     list<int>::iterator it;
-    for (it = dato.begin(); it != dato.end(); it++){
-        while (*it == 0 && it == dato.begin()){
+    for (it = NN.begin(); it != NN.end(); it++){
+        while (*it == 0 && it == NN.begin()){
             if (casilla == 1){
                 RPPL.push_back(0);
                 casilla++;
@@ -76,25 +76,46 @@ void MainWindow::PF(){
         }
         cont++;
         suma += *it;
-        if (cont == n){
+        prueba = LPPL;
+        prueba2 = RPPL;
+        if (cont == n || it == --NN.end()){
             RPPL.push_back(suma);
             LPPL.push_back(suma);
             for (i = 1; i != n; i++){
-                RPPL.push_back(0);
-                LPPL.push_back(0);
+                if(RPPL.size() > 0 && RPPL.size() < n && a == 0){
+                    i += RPPL.size()-1;
+                    a++;
+                }
+                if(n-RPPL.size() == 0){
+                }
+                else{
+                    RPPL.push_back(0);
+                    LPPL.push_back(0);
+                }
             }
+            prueba = LPPL;
+            prueba2 = RPPL;
             suma = 0;
             casilla += cont;
             cont = 0;
         }
     }
-    while (RPPL.size() < 8)
-        RPPL.push_back(0);
-    while (LPPL.size() < 8)
-        LPPL.push_back(0);
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
     list<int>::iterator j;
     cont = 0;
     prueba = LPPL;
+    prueba2 = RPPL;
     j = LPPL.begin();
     for (it = RPPL.begin(); it != RPPL.end(); it++){
         if (cont == 0){
