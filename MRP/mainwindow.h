@@ -2,6 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtSql>
+#include <QInputDialog>
+#include <qfiledialog.h>
+#include <iostream>
+#include <list>
+using namespace std;
+using std::stoi;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,7 +25,23 @@ public:
 private slots:
     void on_Salir_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_Ejecutar_clicked();
+
+    void PF();
+
+    /*void EOQ();
+
+    void POQ();
+
+    void MCU();
+
+    void MCT();
+
+    void SM();*/
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase m_db;
 };
 #endif // MAINWINDOW_H

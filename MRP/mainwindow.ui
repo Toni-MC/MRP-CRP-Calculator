@@ -44,7 +44,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>200</string>
        </property>
       </widget>
      </item>
@@ -56,7 +56,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -80,7 +80,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>200</string>
        </property>
       </widget>
      </item>
@@ -92,7 +92,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -104,7 +104,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -140,7 +140,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1480</string>
        </property>
       </widget>
      </item>
@@ -152,7 +152,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -176,7 +176,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1480</string>
        </property>
       </widget>
      </item>
@@ -188,7 +188,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -200,7 +200,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -236,7 +236,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>200</string>
        </property>
       </widget>
      </item>
@@ -248,7 +248,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -272,7 +272,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>200</string>
        </property>
       </widget>
      </item>
@@ -284,7 +284,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -296,7 +296,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -344,7 +344,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -380,7 +380,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -392,7 +392,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -440,7 +440,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>90</string>
        </property>
       </widget>
      </item>
@@ -476,7 +476,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -488,7 +488,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -524,7 +524,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1800</string>
        </property>
       </widget>
      </item>
@@ -536,7 +536,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -560,7 +560,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1800</string>
        </property>
       </widget>
      </item>
@@ -572,7 +572,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -584,7 +584,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -620,7 +620,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>560</string>
        </property>
       </widget>
      </item>
@@ -632,7 +632,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>90</string>
        </property>
       </widget>
      </item>
@@ -656,7 +656,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>510</string>
        </property>
       </widget>
      </item>
@@ -668,7 +668,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -680,7 +680,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -716,7 +716,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1200</string>
        </property>
       </widget>
      </item>
@@ -728,7 +728,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>40</string>
        </property>
       </widget>
      </item>
@@ -752,7 +752,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1200</string>
        </property>
       </widget>
      </item>
@@ -764,7 +764,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -776,40 +776,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget_9">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>90</y>
-      <width>333</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_10">
-     <item>
-      <widget class="QLabel" name="label_16">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Método de dimensionamiento</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="comboBox">
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -1020,11 +987,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_Ejecutar">
+   <widget class="QPushButton" name="Ejecutar">
     <property name="geometry">
      <rect>
-      <x>1160</x>
-      <y>90</y>
+      <x>990</x>
+      <y>80</y>
       <width>121</width>
       <height>71</height>
      </rect>
@@ -1038,7 +1005,7 @@
      <string>Ejecutar</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>900</x>
