@@ -56,7 +56,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -152,7 +152,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -248,7 +248,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -344,7 +344,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -536,7 +536,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -632,7 +632,7 @@
         </font>
        </property>
        <property name="text">
-        <string>90</string>
+        <string>91</string>
        </property>
       </widget>
      </item>
@@ -728,7 +728,7 @@
         </font>
        </property>
        <property name="text">
-        <string>40</string>
+        <string>41</string>
        </property>
       </widget>
      </item>
@@ -957,7 +957,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -969,7 +969,7 @@
         </font>
        </property>
        <property name="text">
-        <string>0</string>
+        <string>1500</string>
        </property>
       </widget>
      </item>
@@ -1028,11 +1028,86 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="CosteTotal">
        <property name="font">
         <font>
          <pointsize>15</pointsize>
         </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>172</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_10">
+     <item>
+      <widget class="QLabel" name="label_16">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Stock de Seguridad</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="SS">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>40</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>80</y>
+      <width>194</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_12">
+     <item>
+      <widget class="QLabel" name="label_20">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tiempo de Suministro</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Ts">
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>1</string>
        </property>
       </widget>
      </item>
