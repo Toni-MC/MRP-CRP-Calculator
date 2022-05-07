@@ -36,9 +36,10 @@ void MainWindow::on_Ejecutar_clicked()
     //Con una ventana emergente pedimos al usuario el método de dimensionado de lote que quiere utilizar
     QStringList metodo;
     metodo << "Lote a Lote";
-    metodo << "Periodo Fijo";
+    metodo << "Periodo Constante";
     metodo << "EOQ";
     metodo << "POQ";
+    metodo << "Periodo Fijo";
     metodo << "Minimo Coste Unitario";
     metodo << "Minimo Coste Total";
     metodo << "Silver-Meal";
@@ -95,16 +96,22 @@ void MainWindow::on_Ejecutar_clicked()
     H = stoi(h);
 
     //A continuación presentamos los diferentes métodos de dimensionamientos en función de la elección del usuario
-    if (N == "Periodo Fijo")
+    if (N == "Periodo Constante")
+        PCTE();
+    else if(N == "EOQ")
+        EOQ();
+    else if(N == "POQ")
+        POQ();
+    else if(N == "Periodo Fijo")
         PF();
 }
 
-void MainWindow::PF(){
+void MainWindow::PCTE(){
     //Primero es necesario pedir el tamaño del periodo a considerar
     int n = QInputDialog::getInt(this,"Número de periodos","Introduce un número entre 2 y 8",2,2,8);
 
     //Inicializamos las variables a utilizar
-    int cont = 0, suma = 0, casilla = 1, i, lotes = 0, disp=0, CP = 0, CT;
+    int cont = 0, suma = 0, casilla = 1, i, lotes = 0, disp=0;
     list<int>::iterator it,rp,nb,d,r;
     rp = RP.begin();    nb = NB.begin();
 
@@ -183,7 +190,7 @@ void MainWindow::PF(){
         }
     }
 
-    //Al dinal se eliminan los ceros adicionales o se añaden en caso de necesidad
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
     while (RPPL.size() != 8){
         if( RPPL.size() < 8)
             RPPL.push_back(0);
@@ -197,10 +204,91 @@ void MainWindow::PF(){
             LPPL.pop_back();
     }
 
-    //Por último actualizamos la interfaz visual añadiendo todos los términos a la casilla correspondiente, ademas de hacer el cálculo de los costes de posesión y el coste total
-    list<int>::iterator j,k;
-    int comp = 0;
-    cont = 0;
+    actualizarui(lotes);
+}
+
+void MainWindow::EOQ(){
+    int Q, disp = 0, casilla = 1, lotes = 0;
+    list<int>::iterator it, rp, nb, r, d;
+    rp = RP.begin();    nb = NB.begin();
+
+    //Para el EOQ lo primero es hacer el cálculo del lote a emitir
+    for (it = NN.begin(); it != NN.end(); it++)
+        disp += *it;
+    Q = round(sqrt((2*disp*S)/(H*8)));
+
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+            }
+            else if (casilla <= Ts){
+                d = D.end();    d--;
+                r = RPPL.end(); r--;
+                disp = *d+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+            else{
+                d = D.end();    d--;
+                r = RPPL.end(); r--;
+                disp = *d+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+        }
+
+        //Actualizamos la disponibilidad
+        d = D.end();    d--;
+        r = RPPL.end(); r--;
+        disp = *d+*rp+*r-*nb;
+        D.push_back(disp);
+        nb++;   rp++;
+
+        //Despues comprobamos si las NN son mayores a la D y si es asi añadimos el valor que corresponde a la RPPL
+        d = D.end();    d--;
+        if (*d < *it){
+            RPPL.push_back(Q);
+            LPPL.push_back(Q);
+            lotes++;
+        }
+        //Si no se cumple la condición se añade un 0 a la RPPL y el LPPL
+        else{
+            RPPL.push_back(0);
+            LPPL.push_back(0);
+        }
+    }
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    actualizarui(lotes);
+}
+
+void MainWindow::actualizarui(int lotes){
+    //Se procede a crear una función encargada de actualizar la interfaz visual
+    list<int>::iterator j, k, d, it;
+    int comp = 0, cont = 0, CP = 0, CT;
     j = LPPL.begin();
     d = D.begin();
     k = RPPL.begin();
@@ -291,4 +379,189 @@ void MainWindow::PF(){
     }
     CT = lotes*S+CP;
     ui->CosteTotal->setText(QString::number(CT));
+}
+
+void MainWindow::POQ(){
+    //Primero es necesario pedir el valor de p y d
+    double d = QInputDialog::getDouble(this,"Valor de d: Tasa de demanda","Introduce la tasa de demanda");
+    double p = QInputDialog::getDouble(this,"Valor de p: Tasa de producción","Introduce la tasa de producción");
+
+    int Q, disp = 0, casilla = 1, lotes = 0;
+    list<int>::iterator it, rp, nb, r, di;
+    rp = RP.begin();    nb = NB.begin();
+
+    //Para el EOQ lo primero es hacer el cálculo del lote a emitir
+    for (it = NN.begin(); it != NN.end(); it++)
+        disp += *it;
+    Q = round(sqrt((2*disp*S)/(H*8*(1-d/p))));
+
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+            }
+            else if (casilla <= Ts){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+            else{
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+        }
+        //Actualizamos la disponibilidad
+        di = D.end();    di--;
+        r = RPPL.end(); r--;
+        disp = *di+*rp+*r-*nb;
+        D.push_back(disp);
+        nb++;   rp++;
+
+        //Despues comprobamos si las NN son mayores a la D y si es asi añadimos el valor que corresponde a la RPPL
+        di = D.end();    di--;
+        if (*di < *it){
+            RPPL.push_back(Q);
+            LPPL.push_back(Q);
+            lotes++;
+        }
+        //Si no se cumple la condición se añade un 0 a la RPPL y el LPPL
+        else{
+            RPPL.push_back(0);
+            LPPL.push_back(0);
+        }
+    }
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    actualizarui(lotes);
+}
+
+void MainWindow::PF(){
+    int n, cont = 0, suma = 0, casilla = 1, i, lotes = 0, disp=0, num, den, a;
+    float div;
+    list<int>::iterator it, rp, nb, r, d;
+    rp = RP.begin();    nb = NB.begin();
+
+    //Primero calculamos el tamaño de periodo óptimo
+    for (it = NN.begin(); it != NN.end(); it++)
+        disp += *it;
+    div = 8*sqrt((float)(2*S)/(float)(disp*H*8));
+    n = round(div);
+
+    //Leemos la lista de necesidades netas
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+                cont++;
+            }
+            else if (casilla <= Ts){
+                d = D.end();    d--;
+                r = RPPL.end(); r--;
+                disp = *d+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                casilla++;
+                it++;
+                cont++;
+            }
+            else{
+                d = D.end();    d--;
+                r = RPPL.end(); r--;
+                disp = *d+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+                cont++;
+            }
+        }
+
+        //Cada vez que hacemos el cálculo del número de periodos seleccionado se actualizan los datos
+        cont++;
+        suma += *it;
+        if (cont == n || it == --NN.end()){
+
+            // Primero añadimos el lote a pedir en la RPPL y el LPPL, ademas actualizamos la disponibilidad y añadimos un lote si el lote a pedir no es nulo
+            d = D.end();    d--;
+            r = RPPL.end(); r--;
+            disp = *d+*rp+*r-*nb;
+            D.push_back(disp);
+            RPPL.push_back(suma);
+            LPPL.push_back(suma);
+            if (suma > 0)
+                lotes++;
+            nb++;
+            rp++;
+
+            //Despues añadimos 0 hasta que el numero de periodos que ha sido seleccionado se complete
+            for (i = 1; i != n; i++){
+                if(n-RPPL.size() == 0){
+                }
+                else{
+                    d = D.end();    d--;
+                    r = RPPL.end(); r--;
+                    disp = *d+*rp+*r-*nb;
+                    D.push_back(disp);
+                    RPPL.push_back(0);
+                    LPPL.push_back(0);
+                    nb++;
+                    rp++;
+                }
+            }
+            suma = 0;
+            casilla += cont;
+            cont = 0;
+        }
+    }
+
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+
+    actualizarui(lotes);
 }
