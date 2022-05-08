@@ -53,7 +53,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>730</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -71,7 +71,7 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -89,7 +89,7 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>860</x>
+      <x>970</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -107,7 +107,7 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>980</x>
+      <x>1090</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -125,7 +125,7 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>1100</x>
+      <x>1210</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -143,7 +143,7 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -161,7 +161,7 @@
    <widget class="QLineEdit" name="CT1">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>80</y>
       <width>81</width>
       <height>31</height>
@@ -173,13 +173,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="CT2">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>120</y>
       <width>81</width>
       <height>31</height>
@@ -191,13 +191,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>2</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="CT3">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>160</y>
       <width>81</width>
       <height>31</height>
@@ -209,13 +209,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="CT4">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>200</y>
       <width>81</width>
       <height>31</height>
@@ -227,13 +227,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="CT5">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
@@ -245,13 +245,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>2</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="CT6">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>850</x>
       <y>280</y>
       <width>81</width>
       <height>31</height>
@@ -263,13 +263,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te2">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>120</y>
       <width>81</width>
       <height>31</height>
@@ -281,13 +281,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>5</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te6">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>280</y>
       <width>81</width>
       <height>31</height>
@@ -299,13 +299,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>27</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te1">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>80</y>
       <width>81</width>
       <height>31</height>
@@ -317,13 +317,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>20</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te4">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>200</y>
       <width>81</width>
       <height>31</height>
@@ -335,13 +335,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>15</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te3">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>160</y>
       <width>81</width>
       <height>31</height>
@@ -353,13 +353,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>7</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="te5">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>960</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
@@ -371,13 +371,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>30</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp2">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>120</y>
       <width>81</width>
       <height>31</height>
@@ -389,13 +389,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>30</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp6">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>280</y>
       <width>81</width>
       <height>31</height>
@@ -407,13 +407,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>7</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp1">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>80</y>
       <width>81</width>
       <height>31</height>
@@ -425,13 +425,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>25</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp4">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>200</y>
       <width>81</width>
       <height>31</height>
@@ -443,13 +443,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp3">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>160</y>
       <width>81</width>
       <height>31</height>
@@ -461,13 +461,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>10</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tmp5">
     <property name="geometry">
      <rect>
-      <x>970</x>
+      <x>1080</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
@@ -479,13 +479,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>2</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a5">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
@@ -497,13 +497,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.97</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a2">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>120</y>
       <width>81</width>
       <height>31</height>
@@ -515,13 +515,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.99</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a6">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>280</y>
       <width>81</width>
       <height>31</height>
@@ -533,13 +533,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.96</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a4">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>200</y>
       <width>81</width>
       <height>31</height>
@@ -551,13 +551,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.93</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a1">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>80</y>
       <width>81</width>
       <height>31</height>
@@ -569,13 +569,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.95</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="a3">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1190</x>
       <y>160</y>
       <width>81</width>
       <height>31</height>
@@ -587,13 +587,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0.98</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tc5">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>240</y>
       <width>81</width>
       <height>31</height>
@@ -611,7 +611,7 @@
    <widget class="QLineEdit" name="tc2">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>120</y>
       <width>81</width>
       <height>31</height>
@@ -629,7 +629,7 @@
    <widget class="QLineEdit" name="tc6">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>280</y>
       <width>81</width>
       <height>31</height>
@@ -647,7 +647,7 @@
    <widget class="QLineEdit" name="tc4">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>200</y>
       <width>81</width>
       <height>31</height>
@@ -665,7 +665,7 @@
    <widget class="QLineEdit" name="tc1">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>80</y>
       <width>81</width>
       <height>31</height>
@@ -683,7 +683,7 @@
    <widget class="QLineEdit" name="tc3">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>1330</x>
       <y>160</y>
       <width>81</width>
       <height>31</height>
@@ -719,7 +719,7 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>80</y>
       <width>51</width>
       <height>31</height>
@@ -737,7 +737,7 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>120</y>
       <width>51</width>
       <height>31</height>
@@ -755,7 +755,7 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>160</y>
       <width>51</width>
       <height>31</height>
@@ -773,7 +773,7 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>200</y>
       <width>51</width>
       <height>31</height>
@@ -791,7 +791,7 @@
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>240</y>
       <width>51</width>
       <height>31</height>
@@ -809,7 +809,7 @@
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>750</x>
       <y>280</y>
       <width>51</width>
       <height>31</height>
@@ -1153,7 +1153,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_1">
@@ -1171,7 +1171,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>166</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_31">
@@ -1279,7 +1279,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_3">
@@ -1297,7 +1297,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>166</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_4">
@@ -1315,7 +1315,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>221</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_4">
@@ -1333,7 +1333,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_5">
@@ -1351,7 +1351,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_5">
@@ -1369,7 +1369,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>166</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_6">
@@ -1387,7 +1387,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>221</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_6">
@@ -1405,7 +1405,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_7">
@@ -1423,7 +1423,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_7">
@@ -1441,7 +1441,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>166</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_8">
@@ -1459,7 +1459,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_8">
@@ -1477,7 +1477,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_2">
@@ -1495,7 +1495,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>221</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_2">
@@ -1513,7 +1513,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_36">
@@ -2827,7 +2827,7 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>2</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="TsB">
@@ -2845,7 +2845,61 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_48">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>30</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Qej</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="QeA">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>1500</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="QeB">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>240</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>185</string>
     </property>
    </widget>
   </widget>

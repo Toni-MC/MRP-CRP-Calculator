@@ -20,7 +20,7 @@ void MainWindow::on_SALIR_clicked()
 }
 
 
-vector<int> CT,te,PPA,tmp,a,PPB,tc,ACT1(8),ACT2(8),BCT1(8),BCT2(8);
+vector<int> CT(6),te(6),PPA(8),tmp(6),a(6),PPB(8),tc(6),ACT1(8),ACT2(8),BCT1(8),BCT2(8),Total1(8),Total2(8);
 int Aa=1,Ab=1,tsa,tsb,QA,QB,TCA1,TCA2,TCB1,TCB2;
 float A1,A2,B1,B2;
 
@@ -85,8 +85,8 @@ void MainWindow::on_Ejecutar_clicked()
 
     PPB={stoi(PPB_1),stoi(PPB_2),stoi(PPB_3),stoi(PPB_4),stoi(PPB_5),stoi(PPB_6),stoi(PPB_7),stoi(PPB_8)};
 
-    QString _QA1 = ui->QA1->text(); string QA1=_QA1.toStdString(); QA=stoi(QA1);
-    QString _QB1 = ui->QB1->text(); string QB1=_QB1.toStdString(); QB=stoi(QB1);
+    QString _QA1 = ui->QeA->text(); string QA1=_QA1.toStdString(); QA=stoi(QA1);
+    QString _QB1 = ui->QeB->text(); string QB1=_QB1.toStdString(); QB=stoi(QB1);
 
     QString _TsA = ui->TsA->text(); string TsA=_TsA.toStdString();
     QString _TsB = ui->TsB->text(); string TsB=_TsB.toStdString();
@@ -150,9 +150,82 @@ void MainWindow::on_Ejecutar_clicked()
             }
         }
     }
+    for (int i=0;i<8;i++){
+        Total1.at(i)=ACT1.at(i)+BCT1.at(i);
+    }
+    actualizarui();
 }
 
 void MainWindow::actualizarui(){
+    //tcijk
+    ui->tc1->setText(QString::number(tc.at(0)));
+    ui->tc2->setText(QString::number(tc.at(1)));
+    ui->tc3->setText(QString::number(tc.at(2)));
+    ui->tc4->setText(QString::number(tc.at(3)));
+    ui->tc5->setText(QString::number(tc.at(4)));
+    ui->tc6->setText(QString::number(tc.at(5)));
 
+    //Aj
+    ui->AJA1->setText(QString::number(Aa));
+    ui->AJA2->setText(QString::number(Aa));
+    ui->AJB1->setText(QString::number(Ab));
+    ui->AJB2->setText(QString::number(Ab));
+
+    //Qj
+    ui->QA1->setText(QString::number(QA));
+    ui->QA2->setText(QString::number(QA));
+    ui->QB1->setText(QString::number(QB));
+    ui->QB2->setText(QString::number(QB));
+
+    //CT1
+    ui->CT1A_1->setText(QString::number(ACT1.at(0)));
+    ui->T1_1->setText(QString::number(Total1.at(0)));
+    ui->CT2A_1->setText(QString::number(ACT2.at(0)));
+    ui->CT1A_2->setText(QString::number(ACT1.at(1)));
+    ui->CT1B_2->setText(QString::number(BCT1.at(1)));
+    ui->T1_2->setText(QString::number(Total1.at(1)));
+    ui->CT1A_3->setText(QString::number(ACT1.at(2)));
+    ui->CT1B_3->setText(QString::number(BCT1.at(2)));
+    ui->T1_3->setText(QString::number(Total1.at(2)));
+    ui->CT1A_4->setText(QString::number(ACT1.at(3)));
+    ui->CT1B_4->setText(QString::number(BCT1.at(3)));
+    ui->T1_4->setText(QString::number(Total1.at(3)));
+    ui->CT1A_5->setText(QString::number(ACT1.at(4)));
+    ui->CT1B_5->setText(QString::number(BCT1.at(4)));
+    ui->T1_5->setText(QString::number(Total1.at(4)));
+    ui->CT1A_6->setText(QString::number(ACT1.at(5)));
+    ui->CT1B_6->setText(QString::number(BCT1.at(5)));
+    ui->T1_6->setText(QString::number(Total1.at(5)));
+    ui->CT1A_7->setText(QString::number(ACT1.at(6)));
+    ui->CT1B_7->setText(QString::number(BCT1.at(6)));
+    ui->T1_7->setText(QString::number(Total1.at(6)));
+    ui->CT1A_8->setText(QString::number(ACT1.at(7)));
+    ui->CT1B_8->setText(QString::number(BCT1.at(7)));
+    ui->T1_8->setText(QString::number(Total1.at(7)));
+
+    //CT2
+    ui->CT2A_1->setText(QString::number(ACT2.at(0)));
+    ui->CT2A_2->setText(QString::number(ACT2.at(1)));
+    ui->CT2A_3->setText(QString::number(ACT2.at(2)));
+    ui->CT2A_4->setText(QString::number(ACT2.at(3)));
+    ui->CT2A_5->setText(QString::number(ACT2.at(4)));
+    ui->CT2A_6->setText(QString::number(ACT2.at(5)));
+    ui->CT2A_7->setText(QString::number(ACT2.at(6)));
+    ui->CT2A_8->setText(QString::number(ACT2.at(7)));
+    ui->CT2B_1->setText(QString::number(BCT2.at(0)));
+    ui->CT2B_2->setText(QString::number(BCT2.at(1)));
+    ui->CT2B_3->setText(QString::number(BCT2.at(2)));
+    ui->CT2B_4->setText(QString::number(BCT2.at(3)));
+    ui->CT2B_5->setText(QString::number(BCT2.at(4)));
+    ui->CT2B_6->setText(QString::number(BCT2.at(5)));
+    ui->CT2B_7->setText(QString::number(BCT2.at(6)));
+    ui->CT2B_8->setText(QString::number(BCT2.at(7)));
+    ui->T2_1->setText(QString::number(Total2.at(0)));
+    ui->T2_2->setText(QString::number(Total2.at(1)));
+    ui->T2_3->setText(QString::number(Total2.at(2)));
+    ui->T2_4->setText(QString::number(Total2.at(3)));
+    ui->T2_5->setText(QString::number(Total2.at(4)));
+    ui->T2_6->setText(QString::number(Total2.at(5)));
+    ui->T2_7->setText(QString::number(Total2.at(6)));
+    ui->T2_8->setText(QString::number(Total2.at(7)));
 }
-
