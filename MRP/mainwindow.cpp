@@ -97,21 +97,51 @@ void MainWindow::on_Ejecutar_clicked()
 
     //A continuación presentamos los diferentes métodos de dimensionamientos en función de la elección del usuario
     if (N == "Lote a Lote")
-        LaL();
-    else if (N == "Periodo Constante")
-        PCTE();
-    else if(N == "EOQ")
-        EOQ();
-    else if(N == "POQ")
-        POQ();
-    else if(N == "Periodo Fijo")
-        PF();
+        LaL(0);
+    else if (N == "Periodo Constante"){
+        LaL(1);
+    }
+    else if(N == "EOQ"){
+        LaL(2);
+    }
+    else if(N == "POQ"){
+        LaL(3);
+    }
+    else if(N == "Periodo Fijo"){
+        LaL(4);
+    }
+    else if(N == "Minimo Coste Unitario"){
+        LaL(5);
+    }
+    else if(N == "Minimo Coste Total"){
+        LaL(6);
+    }
+    else if(N == "Silver-Meal"){
+        LaL(7);
+    }
 }
 
-void MainWindow::LaL(){
+void MainWindow::LaL(int a){
     int nni= 0, rppli= 0, dis= 0, lotes= 0;
-    list<int>::iterator nb,d,rp,nn,rppl,lppl;
+    list<int>::iterator nb,d,rp,nn,rppl,lppl, it, j;
     nn= NN.begin();    d= D.begin();    rp= RP.begin();    rppl= RPPL.begin();      lppl= LPPL.begin();
+
+    //En caso de hacer un cálculo de nuevo sin cerrar la aplicación es necesario limpiar las listas
+    j = RPPL.begin();
+    it = RPPL.end();
+    RPPL.erase(j,it);
+
+    j = LPPL.begin();
+    it = LPPL.end();
+    LPPL.erase(j,it);
+
+    j = D.begin();  j++;
+    it = D.end();
+    D.erase(j,it);
+
+    j = NN.begin();
+    it = NN.end();
+    NN.erase(j,it);
 
     //Calculamos las necesidades netas
     for (nb= NB.begin(); nb!= NB.end(); nb++){
@@ -150,7 +180,20 @@ void MainWindow::LaL(){
         }
         periodo++;
     }
-    actualizarui(lotes);
+
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    actualizarui(lotes,a);
 }
 
 void MainWindow::PCTE(){
@@ -251,7 +294,7 @@ void MainWindow::PCTE(){
             LPPL.pop_back();
     }
 
-    actualizarui(lotes);
+    actualizarui(lotes, 0);
 }
 
 void MainWindow::EOQ(){
@@ -329,10 +372,10 @@ void MainWindow::EOQ(){
         else
             LPPL.pop_back();
     }
-    actualizarui(lotes);
+    actualizarui(lotes, 0);
 }
 
-void MainWindow::actualizarui(int lotes){
+void MainWindow::actualizarui(int lotes, int a){
     //Se procede a crear una función encargada de actualizar la interfaz visual
     list<int>::iterator j, k, d, it, t;
     int comp = 0, cont = 0, CP = 0, CT;
@@ -435,6 +478,41 @@ void MainWindow::actualizarui(int lotes){
     }
     CT = lotes*S+CP;
     ui->CosteTotal->setText(QString::number(CT));
+
+    //Vaciamos los vectores RPPL y LPPL para reescribirlos en el proceso que corresponda
+    j = RPPL.begin();
+    it = RPPL.end();
+    RPPL.erase(j,it);
+
+    j = LPPL.begin();
+    it = LPPL.end();
+    LPPL.erase(j,it);
+
+    j = D.begin();  j++;
+    it = D.end();
+    D.erase(j,it);
+
+    if (a == 1){
+        PCTE();
+    }
+    else if(a == 2){
+        EOQ();
+    }
+    else if(a == 3){
+        POQ();
+    }
+    else if(a == 4){
+        PF();
+    }
+    else if(a == 5){
+        MCU();
+    }
+    else if(a == 6){
+        MCT();
+    }
+    else if(a == 7){
+        SM();
+    }
 }
 
 void MainWindow::POQ(){
@@ -446,7 +524,7 @@ void MainWindow::POQ(){
     list<int>::iterator it, rp, nb, r, di;
     rp = RP.begin();    nb = NB.begin();
 
-    //Para el EOQ lo primero es hacer el cálculo del lote a emitir
+    //Para el POQ lo primero es hacer el cálculo del lote a emitir
     for (it = NN.begin(); it != NN.end(); it++)
         disp += *it;
     Q = round(sqrt((2*disp*S)/(H*8*(1-d/p))));
@@ -515,11 +593,11 @@ void MainWindow::POQ(){
         else
             LPPL.pop_back();
     }
-    actualizarui(lotes);
+    actualizarui(lotes, 0);
 }
 
 void MainWindow::PF(){
-    int n, cont = 0, suma = 0, casilla = 1, i, lotes = 0, disp=0, num, den, a;
+    int n, cont = 0, suma = 0, casilla = 1, i, lotes = 0, disp=0;
     float div;
     list<int>::iterator it, rp, nb, r, d;
     rp = RP.begin();    nb = NB.begin();
@@ -619,5 +697,380 @@ void MainWindow::PF(){
             LPPL.pop_back();
     }
 
-    actualizarui(lotes);
+    actualizarui(lotes, 0);
+}
+
+void MainWindow::MCU(){
+    int disp = 0, casilla = 1, lotes = 0, Q = 0, Q1, cont = 1, i;
+    float CTu, CTu1, CPu = 0, CP = 0, CP1;
+    list<int>::iterator it, rp, nb, r, di;
+    rp = RP.begin();    nb = NB.begin();
+
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+            }
+            else if (casilla <= Ts){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+            else{
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+        }
+
+        // Se exluyen lo 0 en las NN que no sean iniciales
+        if (*it == 0 && cont != 2){
+            it++;
+            cont++;
+        }
+
+        //Hacemos los cálculos de tamaño de lote y coste total unitario para cada caso, además almacenamos el cálculo anterior para poder hacer una comparación
+        if(Q == 0){
+            Q = *it;
+            CP1 = CP;
+            CTu = CPu + (float)S/Q;
+            CTu1 = CTu;
+            cont++;
+        }
+        else{
+            Q1 = Q;
+            CTu1 = CTu;
+            Q += *it;
+            CP = CP1 + (Q-Q1)*H*(cont - 1);
+            CP1 = CP;
+            CPu = (float)CP/Q;
+            CTu = CPu + (float)S/Q;
+            cont++;
+        }
+
+        //Cuando el nuevo coste unitario sea mayor que el anterior introducimos los datos calculados con anterioridad y comenzamos el cálculo del nuevo lote
+        if (CTu > CTu1){
+            lotes++;
+            cont--;
+            di = D.end();    di--;
+            r = RPPL.end(); r--;
+            disp = *di+*rp+*r-*nb;
+            D.push_back(disp);
+            RPPL.push_back(Q1);
+            LPPL.push_back(Q1);
+            nb++;
+            rp++;
+            Q -= Q1;
+            CPu = 0;
+            CP = 0;
+            CP1 = 0;
+            CTu = CPu + (float)S/Q;
+            CTu1 = CTu;
+            for (i = 0; i != cont-2; i++){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+            }
+            cont = 2;
+        }
+
+    }
+    lotes++;
+    di = D.end();    di--;
+    r = RPPL.end(); r--;
+    disp = *di+*rp+*r-*nb;
+    D.push_back(disp);
+    RPPL.push_back(Q);
+    LPPL.push_back(Q);
+
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    while (D.size() < 8){
+        D.push_back(disp);
+    }
+
+    actualizarui(lotes, 0);
+}
+
+void MainWindow::MCT(){
+    int disp = 0, casilla = 1, lotes = 0, Q = 0, Q1, cont = 1, i, a = 0, CP = 0, CP1, Desv, Desv1;
+    list<int>::iterator it, rp, nb, r, di;
+    rp = RP.begin();    nb = NB.begin();
+
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+            }
+            else if (casilla <= Ts){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+            else{
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+        }
+
+        // Se exluyen lo 0 en las NN que no sean iniciales
+        if (*it == 0 && cont != 2){
+            it++;
+            cont++;
+        }
+
+        //Hacemos los cálculos de tamaño de lote y coste total unitario para cada caso, además almacenamos el cálculo anterior para poder hacer una comparación
+        if(Q == 0){
+            Q = *it;
+            CP1 = CP;
+            Desv = abs(CP - S);
+            Desv1 = Desv;
+            cont++;
+        }
+        else{
+            Q1 = Q;
+            Desv1 = Desv;
+            Q += *it;
+            CP = CP1 + (Q-Q1)*H*(cont - a);
+            CP1 = CP;
+            Desv = abs(CP - S);
+            cont++;
+        }
+
+        //Cuando el nuevo coste unitario sea mayor que el anterior introducimos los datos calculados con anterioridad y comenzamos el cálculo del nuevo lote
+        if (Desv > Desv1){
+            lotes++;
+            cont--;
+            di = D.end();    di--;
+            r = RPPL.end(); r--;
+            disp = *di+*rp+*r-*nb;
+            D.push_back(disp);
+            RPPL.push_back(Q1);
+            LPPL.push_back(Q1);
+            nb++;
+            rp++;
+            Q -= Q1;
+            CP = 0;
+            CP1 = 0;
+            Desv = abs(CP - S);
+            Desv1 = Desv;
+            for (i = 0; i != cont-2; i++){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+            }
+            cont = 2;
+            a = 1;
+        }
+
+    }
+    lotes++;
+    di = D.end();    di--;
+    r = RPPL.end(); r--;
+    disp = *di+*rp+*r-*nb;
+    D.push_back(disp);
+    RPPL.push_back(Q);
+    LPPL.push_back(Q);
+    nb++;
+    rp++;
+    di = D.end();    di--;
+    r = RPPL.end(); r--;
+    disp = *di+*rp+*r-*nb;
+
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    while (D.size() < 8){
+        D.push_back(disp);
+    }
+
+    actualizarui(lotes, 0);
+}
+
+void MainWindow::SM(){
+    int disp = 0, casilla = 1, lotes = 0, Q = 0, Q1, cont = 1, i, a = 0, CP = 0, CP1, Desv, Desv1;
+    list<int>::iterator it, rp, nb, r, di;
+    rp = RP.begin();    nb = NB.begin();
+
+    for (it = NN.begin(); it != NN.end(); it++){
+
+        //Si el primer valor de estas es un 0 entonces no lanzamos el pedido hasta que no sea necesario
+        while (*it == 0 && it == NN.begin()){
+            if (casilla == 1){
+                RPPL.push_back(0);
+                casilla++;
+                it++;
+            }
+            else if (casilla <= Ts){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+            else{
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+                it++;
+            }
+        }
+
+        // Se exluyen lo 0 en las NN que no sean iniciales
+        if (*it == 0 && cont != 2){
+            it++;
+            cont++;
+        }
+
+        //Hacemos los cálculos de tamaño de lote y coste total unitario para cada caso, además almacenamos el cálculo anterior para poder hacer una comparación
+        if(Q == 0){
+            Q = *it;
+            CP1 = CP;
+            Desv = (CP + S)/(cont-a);
+            Desv1 = Desv;
+            cont++;
+        }
+        else{
+            Q1 = Q;
+            Desv1 = Desv;
+            Q += *it;
+            CP = CP1 + (Q-Q1)*H*(cont -1 - a);
+            CP1 = CP;
+            Desv = (CP + S)/(cont-a);
+            cont++;
+        }
+
+        //Cuando el nuevo coste unitario sea mayor que el anterior introducimos los datos calculados con anterioridad y comenzamos el cálculo del nuevo lote
+        if (Desv > Desv1){
+            lotes++;
+            cont--;
+            di = D.end();    di--;
+            r = RPPL.end(); r--;
+            disp = *di+*rp+*r-*nb;
+            D.push_back(disp);
+            RPPL.push_back(Q1);
+            LPPL.push_back(Q1);
+            nb++;
+            rp++;
+            Q -= Q1;
+            CP = 0;
+            CP1 = 0;
+            Desv = (CP + S)/(cont-a);
+            Desv1 = Desv;
+            for (i = 0; i != cont-2; i++){
+                di = D.end();    di--;
+                r = RPPL.end(); r--;
+                disp = *di+*rp+*r-*nb;
+                D.push_back(disp);
+                RPPL.push_back(0);
+                LPPL.push_back(0);
+                nb++;
+                rp++;
+            }
+            cont = 2;
+            a = 1;
+        }
+
+    }
+    lotes++;
+    di = D.end();    di--;
+    r = RPPL.end(); r--;
+    disp = *di+*rp+*r-*nb;
+    D.push_back(disp);
+    RPPL.push_back(Q);
+    LPPL.push_back(Q);
+    nb++;
+    rp++;
+    di = D.end();    di--;
+    r = RPPL.end(); r--;
+    disp = *di+*rp+*r-*nb;
+
+    //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
+    while (RPPL.size() != 8){
+        if( RPPL.size() < 8)
+            RPPL.push_back(0);
+        else
+            RPPL.pop_back();
+    }
+    while (LPPL.size() != 8){
+        if( LPPL.size() < 8)
+            LPPL.push_back(0);
+        else
+            LPPL.pop_back();
+    }
+    while (D.size() < 8){
+        D.push_back(disp);
+    }
+
+    actualizarui(lotes, 0);
 }

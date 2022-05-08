@@ -29,7 +29,7 @@ private slots:
 
     void on_Ejecutar_clicked();
 
-    void LaL();
+    void LaL(int a);
 
     void PCTE();
 
@@ -39,13 +39,13 @@ private slots:
 
     void PF();
 
-    /*void MCU();
+    void MCU();
 
     void MCT();
 
-    void SM();*/
+    void SM();
 
-    void actualizarui(int lotes);
+    void actualizarui(int lotes, int a);
 private:
     Ui::MainWindow *ui;
     QSqlDatabase m_db;
