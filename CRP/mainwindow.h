@@ -7,6 +7,10 @@
 #include <iostream>
 #include <list>
 
+
+using namespace std;
+using std::stoi;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,6 +25,10 @@ public:
 
 private slots:
     void on_SALIR_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_Ejecutar_clicked();
 
 private:
     Ui::MainWindow *ui;

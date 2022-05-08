@@ -17,7 +17,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>290</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -35,7 +35,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>410</x>
       <y>30</y>
       <width>111</width>
       <height>31</height>
@@ -827,7 +827,7 @@
    <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>410</x>
       <y>120</y>
       <width>51</width>
       <height>31</height>
@@ -845,7 +845,7 @@
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>500</x>
+      <x>410</x>
       <y>240</y>
       <width>51</width>
       <height>31</height>
@@ -863,7 +863,7 @@
    <widget class="QLabel" name="label_18">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>300</x>
       <y>120</y>
       <width>51</width>
       <height>31</height>
@@ -881,7 +881,7 @@
    <widget class="QLabel" name="label_19">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>300</x>
       <y>240</y>
       <width>51</width>
       <height>31</height>
@@ -909,7 +909,7 @@
      <string>SALIR</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Ejecutar">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -932,7 +932,7 @@
      <rect>
       <x>30</x>
       <y>340</y>
-      <width>1251</width>
+      <width>1371</width>
       <height>20</height>
      </rect>
     </property>
@@ -2794,6 +2794,60 @@
      <string>Item</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_47">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>30</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ts</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="TsA">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="TsB">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>240</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -2801,7 +2855,7 @@
      <x>0</x>
      <y>0</y>
      <width>1443</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
