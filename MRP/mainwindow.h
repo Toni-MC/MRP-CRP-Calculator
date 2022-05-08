@@ -29,6 +29,8 @@ private slots:
 
     void on_Ejecutar_clicked();
 
+    void LaL();
+
     void PCTE();
 
     void EOQ();

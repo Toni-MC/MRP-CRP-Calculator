@@ -56,7 +56,7 @@ void MainWindow::on_Ejecutar_clicked()
     QString dato7 = ui->NN7->text(); string numero7 = dato7.toStdString();
     QString dato8 = ui->NN8->text(); string numero8 = dato8.toStdString();
     //A continuación se transforma ese string en un int y se introduce en la lista
-    NN = {stoi(numero1),stoi(numero2),stoi(numero3),stoi(numero4),stoi(numero5),stoi(numero6),stoi(numero7),stoi(numero8)};
+    //NN = {stoi(numero1),stoi(numero2),stoi(numero3),stoi(numero4),stoi(numero5),stoi(numero6),stoi(numero7),stoi(numero8)};
 
     //Inicializamos la lista de diponibilidad con solo la disponibilidad inicial
     QString Disp = ui->D1->text(); string disp = Disp.toStdString();
@@ -96,7 +96,9 @@ void MainWindow::on_Ejecutar_clicked()
     H = stoi(h);
 
     //A continuación presentamos los diferentes métodos de dimensionamientos en función de la elección del usuario
-    if (N == "Periodo Constante")
+    if (N == "Lote a Lote")
+        LaL();
+    else if (N == "Periodo Constante")
         PCTE();
     else if(N == "EOQ")
         EOQ();
@@ -104,6 +106,32 @@ void MainWindow::on_Ejecutar_clicked()
         POQ();
     else if(N == "Periodo Fijo")
         PF();
+}
+
+void MainWindow::LaL(){
+    int nni= 0, rppli= 0, dis= 0, lotes= 0;
+    list<int>::iterator nb,d,rp,nn,rppl,lppl;
+    nb= NB.begin();    d= D.begin();    rp= RP.begin();    rppl= RPPL.begin();      lppl= LPPL.begin();
+    //Calculamos las necesidades netas
+    for (nn= NN.begin(); nn!= NN.end(); nn++){
+        nni= *nb-*d-*rp+SS;
+        if (nni>0){
+            rppli= nni;
+            lotes++;
+        }
+        else
+            rppli= 0;
+        //Las disponibilidades necesitan el valor del periodo siguiente
+        dis= *d+*rp+*rppl-*nb;
+        NN.push_back(nni);
+        D.push_back(dis);
+        RPPL.push_back(rppli);
+        nb++;
+        d++;
+        rp++;
+        rppl++;
+    }
+    actualizarui(lotes);
 }
 
 void MainWindow::PCTE(){
@@ -287,83 +315,91 @@ void MainWindow::EOQ(){
 
 void MainWindow::actualizarui(int lotes){
     //Se procede a crear una función encargada de actualizar la interfaz visual
-    list<int>::iterator j, k, d, it;
+    list<int>::iterator j, k, d, it, t;
     int comp = 0, cont = 0, CP = 0, CT;
     j = LPPL.begin();
     d = D.begin();
     k = RPPL.begin();
+    t = NN.begin();
     for (it = RPPL.begin(); it != RPPL.end(); it++){
         if (cont == 0){
             ui->RPPL1->setText(QString::number(*it));
             ui->LPPL1->setText(QString::number(*j));
             ui->D1->setText(QString::number(*d));
-            j++;    cont++; d++;
+            ui->NN1->setText(QString::number(*t));
+            j++;    cont++; d++; t++;
         }
         else if(cont == 1){
             ui->RPPL2->setText(QString::number(*it));
             ui->LPPL2->setText(QString::number(*j));
             ui->D2->setText(QString::number(*d));
+            ui->NN2->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
         }
         else if(cont == 2){
             ui->RPPL3->setText(QString::number(*it));
             ui->LPPL3->setText(QString::number(*j));
             ui->D3->setText(QString::number(*d));
+            ui->NN3->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
         }
         else if(cont == 3){
             ui->RPPL4->setText(QString::number(*it));
             ui->LPPL4->setText(QString::number(*j));
             ui->D4->setText(QString::number(*d));
+            ui->NN4->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
         }
         else if(cont == 4){
             ui->RPPL5->setText(QString::number(*it));
             ui->LPPL5->setText(QString::number(*j));
             ui->D5->setText(QString::number(*d));
+            ui->NN5->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
         }
         else if(cont == 5){
             ui->RPPL6->setText(QString::number(*it));
             ui->LPPL6->setText(QString::number(*j));
             ui->D6->setText(QString::number(*d));
+            ui->NN6->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
         }
         else if(cont == 6){
             ui->RPPL7->setText(QString::number(*it));
             ui->LPPL7->setText(QString::number(*j));
             ui->D7->setText(QString::number(*d));
+            ui->NN7->setText(QString::number(*t));
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
                 CP = CP+(*d-SS)*H;
             }
-            j++;    cont++; d++;    k++;
+            j++;    cont++; d++;    k++;  t++;
             if(*d <= *k)
                 comp = 1;
             if (comp == 1){
@@ -374,6 +410,7 @@ void MainWindow::actualizarui(int lotes){
             ui->RPPL8->setText(QString::number(*it));
             ui->LPPL8->setText(QString::number(*j));
             ui->D8->setText(QString::number(*d));
+            ui->NN8->setText(QString::number(*t));
             cont++;
         }
     }
