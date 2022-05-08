@@ -20,8 +20,9 @@ void MainWindow::on_SALIR_clicked()
 }
 
 
-vector<int> CT,te,PPA,tmp,a,PPB,tc;
+vector<int> CT,te,PPA,tmp,a,PPB,tc,ACT1(8),ACT2(8),BCT1(8),BCT2(8);
 int Aa=1,Ab=1,tsa,tsb,QA,QB,TCA1,TCA2,TCB1,TCB2;
+float A1,A2,B1,B2;
 
 void MainWindow::on_Ejecutar_clicked()
 {
@@ -87,6 +88,11 @@ void MainWindow::on_Ejecutar_clicked()
     QString _QA1 = ui->QA1->text(); string QA1=_QA1.toStdString(); QA=stoi(QA1);
     QString _QB1 = ui->QB1->text(); string QB1=_QB1.toStdString(); QB=stoi(QB1);
 
+    QString _TsA = ui->TsA->text(); string TsA=_TsA.toStdString();
+    QString _TsB = ui->TsB->text(); string TsB=_TsB.toStdString();
+    tsa= stoi(TsA);
+    tsb= stoi(TsB);
+
     for(unsigned int i=0;i<a.size();i++){
         if(i<3){
 
@@ -100,6 +106,8 @@ void MainWindow::on_Ejecutar_clicked()
             else{
                 TCA2=TCA2+tc.at(i)/a.at(i);
             }
+            //Cálculo de Aj
+            Aa= Aa*a.at(i);
         }
         else{
 
@@ -113,25 +121,38 @@ void MainWindow::on_Ejecutar_clicked()
             else{
                 TCB2=TCB2+tc.at(i)/a.at(i);
             }
+            //Cálculo de Aj
+            Ab= Ab*a.at(i);
         }
 
     }
 
-    QString _TsA = ui->TsA->text(); string TsA=_TsA.toStdString();
-    QString _TsB = ui->TsB->text(); string TsB=_TsB.toStdString();
-    tsa= stoi(TsA);
-    tsb= stoi(TsB);
-
-    //Cálculo de Aj
-    for (int i=0; i<6; i++){
-        if (i<3)
-            Aa= Aa*a.at(i);
-        else
-            Ab= Ab*a.at(i);
-    }
-
     //Cálculo del valor del lote
+    A1= (TCA1*QA*Aa)/tsa;
+    A2= (TCA2*QA*Aa)/tsa;
+    B1= (TCB1*QB*Ab)/tsb;
+    B2= (TCB2*QB*Ab)/tsb;
 
+    //Emisión de lotes para cada CT para cada producto
+    for (int j=0; j<8; j++){
+        //Producto A
+        if (PPA.at(j)!=0){
+            for (int k=0; k<tsa; k++){
+                ACT1.at(k+j)=ACT1.at(k+j)+A1;
+                ACT2.at(k+j)=ACT2.at(k+j)+A2;
+            }
+        }
+        //Producto B
+        if (PPB.at(j)!=0){
+            for (int k=0; k<tsb; k++){
+                BCT1.at(k+j)=BCT1.at(k+j)+B1;
+                BCT2.at(k+j)=BCT2.at(k+j)+B2;
+            }
+        }
+    }
+}
+
+void MainWindow::actualizarui(){
 
 }
 
