@@ -123,11 +123,11 @@ public:
     QVBoxLayout *verticalLayout_11;
     QLabel *label_19;
     QLineEdit *CosteTotal;
-    QWidget *widget;
+    QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout_10;
     QLabel *label_16;
     QLineEdit *SS;
-    QWidget *widget1;
+    QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_12;
     QLabel *label_20;
     QLineEdit *Ts;
@@ -143,7 +143,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         layoutWidget_3 = new QWidget(centralwidget);
         layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
-        layoutWidget_3->setGeometry(QRect(700, 190, 110, 275));
+        layoutWidget_3->setGeometry(QRect(700, 170, 110, 291));
         verticalLayout_4 = new QVBoxLayout(layoutWidget_3);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -193,7 +193,7 @@ public:
 
         layoutWidget_2 = new QWidget(centralwidget);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(580, 190, 110, 275));
+        layoutWidget_2->setGeometry(QRect(580, 170, 110, 291));
         verticalLayout_3 = new QVBoxLayout(layoutWidget_2);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -241,7 +241,7 @@ public:
 
         layoutWidget_7 = new QWidget(centralwidget);
         layoutWidget_7->setObjectName(QString::fromUtf8("layoutWidget_7"));
-        layoutWidget_7->setGeometry(QRect(1180, 190, 110, 275));
+        layoutWidget_7->setGeometry(QRect(1180, 170, 110, 291));
         verticalLayout_8 = new QVBoxLayout(layoutWidget_7);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         verticalLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -289,7 +289,7 @@ public:
 
         layoutWidget_6 = new QWidget(centralwidget);
         layoutWidget_6->setObjectName(QString::fromUtf8("layoutWidget_6"));
-        layoutWidget_6->setGeometry(QRect(1060, 190, 110, 275));
+        layoutWidget_6->setGeometry(QRect(1060, 170, 110, 291));
         verticalLayout_7 = new QVBoxLayout(layoutWidget_6);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         verticalLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -337,7 +337,7 @@ public:
 
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(340, 190, 110, 275));
+        layoutWidget->setGeometry(QRect(340, 170, 110, 291));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -385,7 +385,7 @@ public:
 
         layoutWidget_5 = new QWidget(centralwidget);
         layoutWidget_5->setObjectName(QString::fromUtf8("layoutWidget_5"));
-        layoutWidget_5->setGeometry(QRect(940, 190, 110, 275));
+        layoutWidget_5->setGeometry(QRect(940, 170, 110, 291));
         verticalLayout_6 = new QVBoxLayout(layoutWidget_5);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -433,7 +433,7 @@ public:
 
         layoutWidget_4 = new QWidget(centralwidget);
         layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
-        layoutWidget_4->setGeometry(QRect(460, 190, 110, 275));
+        layoutWidget_4->setGeometry(QRect(460, 170, 110, 291));
         verticalLayout_2 = new QVBoxLayout(layoutWidget_4);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -481,7 +481,7 @@ public:
 
         layoutWidget_8 = new QWidget(centralwidget);
         layoutWidget_8->setObjectName(QString::fromUtf8("layoutWidget_8"));
-        layoutWidget_8->setGeometry(QRect(820, 190, 110, 275));
+        layoutWidget_8->setGeometry(QRect(820, 170, 110, 291));
         verticalLayout_5 = new QVBoxLayout(layoutWidget_8);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -535,7 +535,7 @@ public:
         label_17->setFont(font1);
         layoutWidget_10 = new QWidget(centralwidget);
         layoutWidget_10->setObjectName(QString::fromUtf8("layoutWidget_10"));
-        layoutWidget_10->setGeometry(QRect(20, 190, 314, 271));
+        layoutWidget_10->setGeometry(QRect(20, 190, 319, 271));
         verticalLayout_9 = new QVBoxLayout(layoutWidget_10);
         verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
         verticalLayout_9->setContentsMargins(0, 0, 0, 0);
@@ -642,37 +642,37 @@ public:
 
         verticalLayout_11->addWidget(CosteTotal);
 
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(40, 80, 172, 70));
-        verticalLayout_10 = new QVBoxLayout(widget);
+        layoutWidget3 = new QWidget(centralwidget);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(40, 80, 173, 70));
+        verticalLayout_10 = new QVBoxLayout(layoutWidget3);
         verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
         verticalLayout_10->setContentsMargins(0, 0, 0, 0);
-        label_16 = new QLabel(widget);
+        label_16 = new QLabel(layoutWidget3);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setFont(font);
 
         verticalLayout_10->addWidget(label_16);
 
-        SS = new QLineEdit(widget);
+        SS = new QLineEdit(layoutWidget3);
         SS->setObjectName(QString::fromUtf8("SS"));
         SS->setFont(font);
 
         verticalLayout_10->addWidget(SS);
 
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(210, 80, 194, 70));
-        verticalLayout_12 = new QVBoxLayout(widget1);
+        layoutWidget4 = new QWidget(centralwidget);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(210, 80, 197, 70));
+        verticalLayout_12 = new QVBoxLayout(layoutWidget4);
         verticalLayout_12->setObjectName(QString::fromUtf8("verticalLayout_12"));
         verticalLayout_12->setContentsMargins(0, 0, 0, 0);
-        label_20 = new QLabel(widget1);
+        label_20 = new QLabel(layoutWidget4);
         label_20->setObjectName(QString::fromUtf8("label_20"));
         label_20->setFont(font);
 
         verticalLayout_12->addWidget(label_20);
 
-        Ts = new QLineEdit(widget1);
+        Ts = new QLineEdit(layoutWidget4);
         Ts->setObjectName(QString::fromUtf8("Ts"));
         Ts->setFont(font);
 
@@ -697,64 +697,64 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "4", nullptr));
         NB4->setText(QApplication::translate("MainWindow", "200", nullptr));
-        D4->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D4->setText(QString());
         RP4->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN4->setText(QApplication::translate("MainWindow", "200", nullptr));
-        RPPL4->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL4->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL4->setText(QString());
+        LPPL4->setText(QString());
         label_3->setText(QApplication::translate("MainWindow", "3", nullptr));
         NB3->setText(QApplication::translate("MainWindow", "1480", nullptr));
-        D3->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D3->setText(QString());
         RP3->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN3->setText(QApplication::translate("MainWindow", "1480", nullptr));
-        RPPL3->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL3->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL3->setText(QString());
+        LPPL3->setText(QString());
         label_8->setText(QApplication::translate("MainWindow", "8", nullptr));
         NB8->setText(QApplication::translate("MainWindow", "200", nullptr));
-        D8->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D8->setText(QString());
         RP8->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN8->setText(QApplication::translate("MainWindow", "200", nullptr));
-        RPPL8->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL8->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL8->setText(QString());
+        LPPL8->setText(QString());
         label_7->setText(QApplication::translate("MainWindow", "7", nullptr));
         NB7->setText(QApplication::translate("MainWindow", "0", nullptr));
-        D7->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D7->setText(QString());
         RP7->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN7->setText(QApplication::translate("MainWindow", "0", nullptr));
-        RPPL7->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL7->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL7->setText(QString());
+        LPPL7->setText(QString());
         label->setText(QApplication::translate("MainWindow", "1", nullptr));
         NB1->setText(QApplication::translate("MainWindow", "0", nullptr));
         D1->setText(QApplication::translate("MainWindow", "90", nullptr));
         RP1->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN1->setText(QApplication::translate("MainWindow", "0", nullptr));
-        RPPL1->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL1->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL1->setText(QString());
+        LPPL1->setText(QString());
         label_6->setText(QApplication::translate("MainWindow", "6", nullptr));
         NB6->setText(QApplication::translate("MainWindow", "1800", nullptr));
-        D6->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D6->setText(QString());
         RP6->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN6->setText(QApplication::translate("MainWindow", "1800", nullptr));
-        RPPL6->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL6->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL6->setText(QString());
+        LPPL6->setText(QString());
         label_2->setText(QApplication::translate("MainWindow", "2", nullptr));
         NB2->setText(QApplication::translate("MainWindow", "560", nullptr));
-        D2->setText(QApplication::translate("MainWindow", "91", nullptr));
+        D2->setText(QString());
         RP2->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN2->setText(QApplication::translate("MainWindow", "510", nullptr));
-        RPPL2->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL2->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL2->setText(QString());
+        LPPL2->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "5", nullptr));
         NB5->setText(QApplication::translate("MainWindow", "1200", nullptr));
-        D5->setText(QApplication::translate("MainWindow", "41", nullptr));
+        D5->setText(QString());
         RP5->setText(QApplication::translate("MainWindow", "0", nullptr));
         NN5->setText(QApplication::translate("MainWindow", "1200", nullptr));
-        RPPL5->setText(QApplication::translate("MainWindow", "1", nullptr));
-        LPPL5->setText(QApplication::translate("MainWindow", "1", nullptr));
+        RPPL5->setText(QString());
+        LPPL5->setText(QString());
         label_17->setText(QApplication::translate("MainWindow", "MRP", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "Periodo", nullptr));
         NB->setText(QApplication::translate("MainWindow", "Necesidades Brutas", nullptr));
-        label_10->setText(QApplication::translate("MainWindow", "Disponibilidad", nullptr));
+        label_10->setText(QApplication::translate("MainWindow", "Disponibilidades", nullptr));
         label_12->setText(QApplication::translate("MainWindow", "Recepciones Programadas", nullptr));
         label_13->setText(QApplication::translate("MainWindow", "Necesidades Netas", nullptr));
         label_14->setText(QApplication::translate("MainWindow", "Recepci\303\263n de Pedidos Planificados", nullptr));

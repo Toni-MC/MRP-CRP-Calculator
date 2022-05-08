@@ -111,25 +111,44 @@ void MainWindow::on_Ejecutar_clicked()
 void MainWindow::LaL(){
     int nni= 0, rppli= 0, dis= 0, lotes= 0;
     list<int>::iterator nb,d,rp,nn,rppl,lppl;
-    nb= NB.begin();    d= D.begin();    rp= RP.begin();    rppl= RPPL.begin();      lppl= LPPL.begin();
+    nn= NN.begin();    d= D.begin();    rp= RP.begin();    rppl= RPPL.begin();      lppl= LPPL.begin();
+
     //Calculamos las necesidades netas
-    for (nn= NN.begin(); nn!= NN.end(); nn++){
+    for (nb= NB.begin(); nb!= NB.end(); nb++){
         nni= *nb-*d-*rp+SS;
         if (nni>0){
             rppli= nni;
             lotes++;
         }
-        else
+        else{
+            nni= 0;
             rppli= 0;
+        }
         //Las disponibilidades necesitan el valor del periodo siguiente
-        dis= *d+*rp+*rppl-*nb;
+        dis= *d+*rp+rppli-*nb;
         NN.push_back(nni);
         D.push_back(dis);
         RPPL.push_back(rppli);
-        nb++;
+        nn++;
         d++;
         rp++;
         rppl++;
+    }
+    //Actualizamos el lanzamiento de los pedidos planificados
+    int periodo= 1;
+    for (rppl= RPPL.begin(); rppl!= RPPL.end(); rppl++){
+        if (periodo==1){
+            for (int i=0; i<Ts; i++)
+                rppl++;
+        }
+        //El resto de valores serán cero            MAAAAAAAAAAAAAAAAL
+        if (periodo > 8-Ts){
+            LPPL.push_back(0);
+        }
+        else {
+            LPPL.push_back(*rppl);
+        }
+        periodo++;
     }
     actualizarui(lotes);
 }

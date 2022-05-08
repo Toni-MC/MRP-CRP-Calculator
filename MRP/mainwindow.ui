@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>700</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -56,7 +56,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -92,7 +92,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -104,7 +104,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -114,9 +114,9 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -152,7 +152,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -188,7 +188,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -200,7 +200,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -210,9 +210,9 @@
     <property name="geometry">
      <rect>
       <x>1180</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -248,7 +248,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -284,7 +284,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -296,7 +296,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -306,9 +306,9 @@
     <property name="geometry">
      <rect>
       <x>1060</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -344,7 +344,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -380,7 +380,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -392,7 +392,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -402,9 +402,9 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -476,7 +476,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -488,7 +488,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -498,9 +498,9 @@
     <property name="geometry">
      <rect>
       <x>940</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -536,7 +536,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -572,7 +572,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -584,7 +584,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -594,9 +594,9 @@
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -632,7 +632,7 @@
         </font>
        </property>
        <property name="text">
-        <string>91</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -668,7 +668,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -680,7 +680,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -690,9 +690,9 @@
     <property name="geometry">
      <rect>
       <x>820</x>
-      <y>190</y>
+      <y>170</y>
       <width>110</width>
-      <height>275</height>
+      <height>291</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -728,7 +728,7 @@
         </font>
        </property>
        <property name="text">
-        <string>41</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -764,7 +764,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -776,7 +776,7 @@
         </font>
        </property>
        <property name="text">
-        <string>1</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -805,7 +805,7 @@
      <rect>
       <x>20</x>
       <y>190</y>
-      <width>314</width>
+      <width>319</width>
       <height>271</height>
      </rect>
     </property>
@@ -842,7 +842,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Disponibilidad</string>
+        <string>Disponibilidades</string>
        </property>
       </widget>
      </item>
@@ -1041,12 +1041,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
       <y>80</y>
-      <width>172</width>
+      <width>173</width>
       <height>70</height>
      </rect>
     </property>
@@ -1077,12 +1077,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>210</x>
       <y>80</y>
-      <width>194</width>
+      <width>197</width>
       <height>70</height>
      </rect>
     </property>
