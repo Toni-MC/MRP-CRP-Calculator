@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "list"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,3 +14,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_SALIR_clicked()
+{
+    close();
+}
+
+list<int>nn;
