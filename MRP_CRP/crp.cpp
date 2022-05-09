@@ -340,7 +340,7 @@ void CRP::on_pushButton_ExcelComun_clicked()
     vector<QString> Qej;
     vector<QString> CTk;
     vector<QString> tei;
-    vector<QString> tmp;
+    vector<QString> tmpp;
     vector<QString> ai;
     vector<QString> PPL;
     vector<QString> row;
@@ -358,7 +358,7 @@ void CRP::on_pushButton_ExcelComun_clicked()
 
         if (row[0]=="CTk")      CTk=row;
         if (row[0]=="tei")      tei=row;
-        if (row[0]=="tmp")      tmp=row;
+        if (row[0]=="tmp")      tmpp=row;
         if (row[0]=="ai")       ai=row;
 
     }
@@ -380,12 +380,12 @@ void CRP::on_pushButton_ExcelComun_clicked()
     ui->te6->setText(tei[6]);
 
     // tmp
-    ui->tmp1->setText(tmp[1]);
-    ui->tmp2->setText(tmp[2]);
-    ui->tmp3->setText(tmp[3]);
-    ui->tmp4->setText(tmp[4]);
-    ui->tmp5->setText(tmp[5]);
-    ui->tmp6->setText(tmp[6]);
+    ui->tmp1->setText(tmpp[1]);
+    ui->tmp2->setText(tmpp[2]);
+    ui->tmp3->setText(tmpp[3]);
+    ui->tmp4->setText(tmpp[4]);
+    ui->tmp5->setText(tmpp[5]);
+    ui->tmp6->setText(tmpp[6]);
 
     // ai
     ui->a1->setText(ai[1]);
