@@ -10,3 +10,7 @@ GLOBAL::GLOBAL(vector<QString> NB, vector<QString> D, vector<QString> RP, vector
     global["LPPL"] = LPPL;
     global["CT"] = CT;
 }
+
+map<string, vector<QString>> GLOBAL::get_Valor(){
+    return global;
+}

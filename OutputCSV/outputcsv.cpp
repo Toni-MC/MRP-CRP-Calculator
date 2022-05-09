@@ -1,7 +1,6 @@
 #include "outputcsv.h"
 
-OutputCSV::OutputCSV()
-{
+OutputCSV::OutputCSV(class global global){
 
     vector<QString> NB(9,"1");
     NB[0]="NB";
@@ -30,7 +29,7 @@ OutputCSV::OutputCSV()
 }
 
 
-void OutputCSV::crearCSV()
+void OutputCSV::crearCSV(class global global)
 {
 
     QFile file("./file.csv");

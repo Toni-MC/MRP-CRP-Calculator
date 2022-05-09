@@ -8,6 +8,7 @@ class NNP:public MRP{
     vector<QString> Nnp;
 public:
     NNP();
+    vector<QString> getValor();
 };
 
 #endif // NNP_H

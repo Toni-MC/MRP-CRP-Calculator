@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../OutputCSV/outputcsv.cpp \
     crp.cpp \
     dp.cpp \
     global.cpp \
@@ -17,10 +18,12 @@ SOURCES += \
     mrp.cpp \
     nb.cpp \
     nnp.cpp \
+    outputcsv.cpp \
     rpp.cpp \
     rpplp.cpp
 
 HEADERS += \
+    ../OutputCSV/outputcsv.h \
     crp.h \
     dp.h \
     global.h \
@@ -28,6 +31,7 @@ HEADERS += \
     mrp.h \
     nb.h \
     nnp.h \
+    outputcsv.h \
     rpp.h \
     rpplp.h
 

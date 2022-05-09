@@ -74,7 +74,7 @@ private slots:
 
     void on_pushButton_CRP_clicked();
 
-
+    void on_Exportar_clicked();
 
 private:
     Ui::MRP *ui;

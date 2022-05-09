@@ -8,6 +8,7 @@ class RPP:public MRP{
     vector<QString> Rpp;
 public:
     RPP();
+    vector<QString> getValor();
 };
 
 #endif // RPP_H
