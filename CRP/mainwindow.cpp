@@ -21,9 +21,10 @@ void MainWindow::on_SALIR_clicked()
 
 //Se crean los vectores y variables necesarias
 
-vector<int> CT(6),te(6),PPA(8),tmp(6),a(6),PPB(8),tc,ACT1(8),ACT2(8),BCT1(8),BCT2(8),Total1(8),Total2(8);
-int Aa=1,Ab=1,tsa,tsb,QA,QB,TCA1,TCA2,TCB1,TCB2;
-float A1,A2,B1,B2;
+vector<int> CT(6),te(6),PPA(8),tmp(6),PPB(8),ACT1(15),ACT2(15),BCT1(15),BCT2(15),Total1(15),Total2(15);
+vector<float> tc,a(6);
+int tsa,tsb,QA,QB;
+float A1,A2,B1,B2,TCA1,TCA2,TCB1,TCB2, Aa=1,Ab=1;
 
 void MainWindow::on_Ejecutar_clicked()
 {
@@ -63,7 +64,7 @@ void MainWindow::on_Ejecutar_clicked()
     QString _a5 = ui->a5->text(); string a5= _a5.toStdString();
     QString _a6 = ui->a6->text(); string a6= _a6.toStdString();
 
-    a= {stoi(a1),stoi(a2),stoi(a3),stoi(a4),stoi(a5),stoi(a6)};
+    a= {stof(a1),stof(a2),stof(a3),stof(a4),stof(a5),stof(a6)};
 
     QString _PPA_1 = ui->PPA_1->text(); string PPA_1=_PPA_1.toStdString();
     QString _PPA_2 = ui->PPA_2->text(); string PPA_2=_PPA_2.toStdString();
@@ -130,7 +131,8 @@ void MainWindow::on_Ejecutar_clicked()
     }
 */
     //Método con sólo iteradores y sin .at()
-    vector<int>::iterator e,p,t,it;
+    vector<int>::iterator e,p,t;
+    vector<float>::iterator it;
     p= tmp.begin(); t= CT.begin();  it= a.begin();
     int i= 0;
     float num= 0;
@@ -138,8 +140,8 @@ void MainWindow::on_Ejecutar_clicked()
         if(i<3){
 
             //Cálculo de tciAk
-            tc.push_back((*e/60)+(*p/QA));
-            num= (*e/60)+(*p/QA);
+            tc.push_back(((float)*e/60)+((float)*p/(float)QA));
+            num= ((float)*e/60)+((float)*p/(float)QA);
 
             //Cálculo de TCAk
             if(*t==1){
@@ -158,8 +160,8 @@ void MainWindow::on_Ejecutar_clicked()
         else{
 
             //Cálculo de tciBk
-            tc.push_back((*e/60)+(*p/QB));
-            num= (*e/60)+(*p/QB);
+            tc.push_back(((float)*e/60)+((float)*p/(float)QA));
+            num= ((float)*e/60)+((float)*p/(float)QA);
 
             //Cálculo de TCBk
             if(*t==1){
@@ -179,10 +181,10 @@ void MainWindow::on_Ejecutar_clicked()
     }
 
     //Cálculo del valor del lote
-    A1= (TCA1*QA*Aa)/tsa;
-    A2= (TCA2*QA*Aa)/tsa;
-    B1= (TCB1*QB*Ab)/tsb;
-    B2= (TCB2*QB*Ab)/tsb;
+    A1= (TCA1*QA*Aa)/(float)tsa;
+    A2= (TCA2*QA*Aa)/(float)tsa;
+    B1= (TCB1*QB*Ab)/(float)tsb;
+    B2= (TCB2*QB*Ab)/(float)tsb;
 
     //Emisión de lotes para cada CT para cada producto
     for (int j=0; j<8; j++){
@@ -205,7 +207,7 @@ void MainWindow::on_Ejecutar_clicked()
         Total1.at(i)=ACT1.at(i)+BCT1.at(i);
         Total2.at(i)=ACT2.at(i)+BCT2.at(i);
     }
-    //actualizarui();
+    actualizarui();
 }
 
 void MainWindow::actualizarui(){

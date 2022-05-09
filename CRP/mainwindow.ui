@@ -1153,7 +1153,7 @@
      </font>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>185</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_1">
@@ -1171,7 +1171,7 @@
      </font>
     </property>
     <property name="text">
-     <string>166</string>
+     <string>1500</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_31">
@@ -1279,7 +1279,7 @@
      </font>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>185</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_3">
@@ -1297,7 +1297,7 @@
      </font>
     </property>
     <property name="text">
-     <string>166</string>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_4">
@@ -1315,7 +1315,7 @@
      </font>
     </property>
     <property name="text">
-     <string>221</string>
+     <string>185</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_4">
@@ -1333,7 +1333,7 @@
      </font>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1500</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_5">
@@ -1369,7 +1369,7 @@
      </font>
     </property>
     <property name="text">
-     <string>166</string>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_6">
@@ -1387,7 +1387,7 @@
      </font>
     </property>
     <property name="text">
-     <string>221</string>
+     <string>185</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_6">
@@ -1405,7 +1405,7 @@
      </font>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1500</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_7">
@@ -1441,7 +1441,7 @@
      </font>
     </property>
     <property name="text">
-     <string>166</string>
+     <string>1500</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPB_8">
@@ -1495,7 +1495,7 @@
      </font>
     </property>
     <property name="text">
-     <string>221</string>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="PPA_2">
@@ -1513,7 +1513,7 @@
      </font>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>1500</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_36">
