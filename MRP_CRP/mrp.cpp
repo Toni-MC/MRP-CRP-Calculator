@@ -1,6 +1,13 @@
 #include "mrp.h"
 #include "ui_mrp.h"
 #include "crp.h"
+#include "nb.h"
+#include "nnp.h"
+#include "dp.h"
+#include "rpp.h"
+#include "rpplp.h"
+#include "lpplp.h"
+#include "global.h"
 
 MRP::MRP(QWidget *parent)
     : QMainWindow(parent)
@@ -105,6 +112,90 @@ void MRP::on_pushButton_Excel_clicked(){
     ui->NN6->clear();
     ui->NN7->clear();
     ui->NN8->clear();
+}
+
+vector<QString> MRP::Extraer_NB(){
+    vector<QString> Nb;
+    QString dato1 = ui->NB1->text();
+    QString dato2 = ui->NB2->text();
+    QString dato3 = ui->NB3->text();
+    QString dato4 = ui->NB4->text();
+    QString dato5 = ui->NB5->text();
+    QString dato6 = ui->NB6->text();
+    QString dato7 = ui->NB7->text();
+    QString dato8 = ui->NB8->text();
+    Nb = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return Nb;
+}
+
+vector<QString> MRP::Extraer_NN(){
+    vector<QString> Nn;
+    QString dato1 = ui->NN1->text();
+    QString dato2 = ui->NN2->text();
+    QString dato3 = ui->NN3->text();
+    QString dato4 = ui->NN4->text();
+    QString dato5 = ui->NN5->text();
+    QString dato6 = ui->NN6->text();
+    QString dato7 = ui->NN7->text();
+    QString dato8 = ui->NN8->text();
+    Nn = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return Nn;
+}
+
+vector<QString> MRP::Extraer_D(){
+    vector<QString> D;
+    QString dato1 = ui->D1->text();
+    QString dato2 = ui->D2->text();
+    QString dato3 = ui->D3->text();
+    QString dato4 = ui->D4->text();
+    QString dato5 = ui->D5->text();
+    QString dato6 = ui->D6->text();
+    QString dato7 = ui->D7->text();
+    QString dato8 = ui->D8->text();
+    D = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return D;
+}
+
+vector<QString> MRP::Extraer_RP(){
+    vector<QString> Rp;
+    QString dato1 = ui->RP1->text();
+    QString dato2 = ui->RP2->text();
+    QString dato3 = ui->RP3->text();
+    QString dato4 = ui->RP4->text();
+    QString dato5 = ui->RP5->text();
+    QString dato6 = ui->RP6->text();
+    QString dato7 = ui->RP7->text();
+    QString dato8 = ui->RP8->text();
+    Rp = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return Rp;
+}
+
+vector<QString> MRP::Extraer_RPPL(){
+    vector<QString> Lppl;
+    QString dato1 = ui->LPPL1->text();
+    QString dato2 = ui->LPPL2->text();
+    QString dato3 = ui->LPPL3->text();
+    QString dato4 = ui->LPPL4->text();
+    QString dato5 = ui->LPPL5->text();
+    QString dato6 = ui->LPPL6->text();
+    QString dato7 = ui->LPPL7->text();
+    QString dato8 = ui->LPPL8->text();
+    Lppl = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return Lppl;
+}
+
+vector<QString> MRP::Extraer_LPPL(){
+    vector<QString> Rppl;
+    QString dato1 = ui->RPPL1->text();
+    QString dato2 = ui->RPPL2->text();
+    QString dato3 = ui->RPPL3->text();
+    QString dato4 = ui->RPPL4->text();
+    QString dato5 = ui->RPPL5->text();
+    QString dato6 = ui->RPPL6->text();
+    QString dato7 = ui->RPPL7->text();
+    QString dato8 = ui->RPPL8->text();
+    Rppl = {dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8};
+    return Rppl;
 }
 
 void MRP::on_Ejecutar_clicked()
@@ -559,8 +650,6 @@ void MRP::actualizarui(int lotes, int a){
     while (*j==0) {
         Lote=*j;    j++;
     };
-
-
 
 
     //Vaciamos los vectores RPPL y LPPL para reescribirlos en el proceso que corresponda
@@ -1182,5 +1271,19 @@ void MRP::on_pushButton_CRP_clicked()
     CRP m(Ts,LPP,Qej,this);
     m.setModal(true);
     m.exec();
+}
+
+
+void MRP::on_Exportar_clicked()
+{
+    NBP Nbp;
+    NNP Nnp;
+    DP Dp;
+    RPP Rpp;
+    RPPLP Rpplp;
+    LPPLP Lpplp;
+    vector<QString> Ctp = {ui->CosteTotal->text()};
+    GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
+
 }
 

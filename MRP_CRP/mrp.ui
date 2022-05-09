@@ -1131,6 +1131,24 @@
      <string>CRP</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="Exportar">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>560</y>
+      <width>351</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Exportar Archivo Excel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1138,7 +1156,7 @@
      <x>0</x>
      <y>0</y>
      <width>1312</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

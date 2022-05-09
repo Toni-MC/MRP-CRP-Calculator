@@ -10,12 +10,26 @@ CONFIG += c++11
 
 SOURCES += \
     crp.cpp \
+    dp.cpp \
+    global.cpp \
+    lpplp.cpp \
     main.cpp \
-    mrp.cpp
+    mrp.cpp \
+    nb.cpp \
+    nnp.cpp \
+    rpp.cpp \
+    rpplp.cpp
 
 HEADERS += \
     crp.h \
-    mrp.h
+    dp.h \
+    global.h \
+    lpplp.h \
+    mrp.h \
+    nb.h \
+    nnp.h \
+    rpp.h \
+    rpplp.h
 
 FORMS += \
     crp.ui \
