@@ -19,13 +19,15 @@ void MainWindow::on_SALIR_clicked()
     close();
 }
 
+//Se crean los vectores y variables necesarias
 
-vector<int> CT(6),te(6),PPA(8),tmp(6),a(6),PPB(8),tc(6),ACT1(8),ACT2(8),BCT1(8),BCT2(8),Total1(8),Total2(8);
+vector<int> CT(6),te(6),PPA(8),tmp(6),a(6),PPB(8),tc,ACT1(8),ACT2(8),BCT1(8),BCT2(8),Total1(8),Total2(8);
 int Aa=1,Ab=1,tsa,tsb,QA,QB,TCA1,TCA2,TCB1,TCB2;
 float A1,A2,B1,B2;
 
 void MainWindow::on_Ejecutar_clicked()
 {
+    //Primero se guardan todos los datos del ui en los vectores y variables
     QString _CT1 = ui->CT1->text(); string CT1=_CT1.toStdString();
     QString _CT2 = ui->CT1->text(); string CT2=_CT2.toStdString();
     QString _CT3 = ui->CT1->text(); string CT3=_CT3.toStdString();
@@ -92,37 +94,86 @@ void MainWindow::on_Ejecutar_clicked()
     QString _TsB = ui->TsB->text(); string TsB=_TsB.toStdString();
     tsa= stoi(TsA);
     tsb= stoi(TsB);
-
-    for(unsigned int i=0;i<a.size();i++){
+/*
+    for(unsigned int i=0;i<6;i++){
         if(i<3){
 
-            //Cálculo de tc
+            //Cálculo de tciAk
             tc.at(i)=(te.at(i)/60)+(tmp.at(i)/QA);
 
-            //Cálculo de TC
+            //Cálculo de TCAk
             if(CT.at(i)==1){
                 TCA1=TCA1+tc.at(i)/a.at(i);
             }
             else{
                 TCA2=TCA2+tc.at(i)/a.at(i);
             }
-            //Cálculo de Aj
+            //Cálculo de Aa
             Aa= Aa*a.at(i);
         }
         else{
 
-            //Cálculo de tc
+            //Cálculo de tciBk
             tc.at(i)=(te.at(i)/60)+(tmp.at(i)/QB);
 
-            //Cálculo de tc
+            //Cálculo de TCBk
             if(CT.at(i)==1){
                 TCB1=TCB1+tc.at(i)/a.at(i);
             }
             else{
                 TCB2=TCB2+tc.at(i)/a.at(i);
             }
-            //Cálculo de Aj
+            //Cálculo de Ab
             Ab= Ab*a.at(i);
+        }
+
+    }
+*/
+    //Método con sólo iteradores y sin .at()
+    vector<int>::iterator e,p,t,it;
+    p= tmp.begin(); t= CT.begin();  it= a.begin();
+    int i= 0;
+    float num= 0;
+    for(e= te.begin(); e!= te.end(); e++){
+        if(i<3){
+
+            //Cálculo de tciAk
+            tc.push_back((*e/60)+(*p/QA));
+            num= (*e/60)+(*p/QA);
+
+            //Cálculo de TCAk
+            if(*t==1){
+                TCA1=TCA1+num/(*it);
+            }
+            else{
+                TCA2=TCA2+num/(*it);
+            }
+            //Cálculo de Aa
+            Aa= Aa*(*it);
+            i++;
+            p++;
+            t++;
+            it++;
+        }
+        else{
+
+            //Cálculo de tciBk
+            tc.push_back((*e/60)+(*p/QB));
+            num= (*e/60)+(*p/QB);
+
+            //Cálculo de TCBk
+            if(*t==1){
+                TCB1=TCB1+num/(*it);
+            }
+            else{
+                TCB2=TCB2+num/(*it);
+            }
+            //Cálculo de Ab
+            Ab= Ab*(*it);
+            i++;
+            p++;
+            t++;
+            it++;
         }
 
     }
@@ -152,8 +203,9 @@ void MainWindow::on_Ejecutar_clicked()
     }
     for (int i=0;i<8;i++){
         Total1.at(i)=ACT1.at(i)+BCT1.at(i);
+        Total2.at(i)=ACT2.at(i)+BCT2.at(i);
     }
-    actualizarui();
+    //actualizarui();
 }
 
 void MainWindow::actualizarui(){
