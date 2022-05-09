@@ -30,8 +30,8 @@ void CRP::on_SALIR_clicked()
     close();
 }
 
-vector<int> CT(6),te(6),PPA(8),tmp(6),PPB(15),ACT1(15),ACT2(15),BCT1(15),BCT2(15),Total1(15),Total2(15);
-vector<float> tc,a(6);
+vector<int> CT(6),te(6),tmp(6);
+vector<float> tc,a(6),PPB(15),PPA(15),ACT1(15),ACT2(15),BCT1(15),BCT2(15),Total1(15),Total2(15);
 int tsa,tsb,QA,QB;
 float A1,A2,B1,B2,TCA1,TCA2,TCB1,TCB2, Aa=1,Ab=1;
 
