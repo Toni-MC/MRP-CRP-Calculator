@@ -7,7 +7,7 @@
 class LPPLP:public MRP{
     vector<QString> Lpplp;
 public:
-    LPPLP(MRP mrp);
+    LPPLP();
     vector<QString> getValor();
 };
 

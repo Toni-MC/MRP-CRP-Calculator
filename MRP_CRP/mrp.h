@@ -34,6 +34,7 @@ public:
     list<int> NN,RPPL,LPPL,D,RP, NB;
     int Ts, SS, S, H, Lote;
 
+protected slots:
     vector<QString> Extraer_NB();
 
     vector<QString> Extraer_NN();
@@ -46,7 +47,6 @@ public:
 
     vector<QString> Extraer_LPPL();
 
-private slots:
     void on_Salir_clicked();
 
     void on_pushButton_Excel_clicked();
