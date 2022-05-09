@@ -11,7 +11,7 @@
 #include "global.h"
 #include <QFileDialog>
 #include <QInputDialog>
-
+#include "mrp.h"
 
 using namespace std;
 
@@ -20,7 +20,7 @@ class OutputCSV{
 public:
     OutputCSV();
 
-    void crearCSV(GLOBAL Datos);
+    void crearCSV(GLOBAL Datos, QString filename);
 
 };
 

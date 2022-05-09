@@ -1837,8 +1837,7 @@ debug/mrp.o: ../MRP_CRP/mrp.cpp ../MRP_CRP/mrp.h \
 		../MRP_CRP/global.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QString \
 		../MRP_CRP/outputcsv.h \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QTextStream \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/QSqlQuery
+		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QTextStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mrp.o ..\MRP_CRP\mrp.cpp
 
 debug/nb.o: ../MRP_CRP/nb.cpp ../MRP_CRP/nb.h \
@@ -2511,16 +2510,11 @@ debug/outputcsv.o: ../MRP_CRP/outputcsv.cpp ../MRP_CRP/outputcsv.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextformat.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qpen.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextoption.h \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/QSqlQuery \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlquery.h \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qtsqlglobal.h \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qtsql-config.h \
-		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqldatabase.h \
+		../MRP_CRP/mrp.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qicon.h \
-		../MRP_CRP/mrp.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/QtSql \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/QtSqlDepends \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QtCore \
@@ -2642,12 +2636,16 @@ debug/outputcsv.o: ../MRP_CRP/outputcsv.cpp ../MRP_CRP/outputcsv.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qwineventnotifier.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qxmlstream.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qtcoreversion.h \
+		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qtsqlglobal.h \
+		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qtsql-config.h \
+		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqldatabase.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqldriver.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqldriverplugin.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlerror.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlfield.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlindex.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlrecord.h \
+		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlquery.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlquerymodel.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtSql/qsqlrelationaldelegate.h \
 		C:/Apps/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qitemdelegate.h \

@@ -145,6 +145,7 @@ vector<QString> MRP::Extraer_NN(){
 
 vector<QString> MRP::Extraer_D(){
     vector<QString> D;
+
     QString dato1 = ui->D1->text();
     QString dato2 = ui->D2->text();
     QString dato3 = ui->D3->text();
@@ -1287,7 +1288,8 @@ void MRP::on_Exportar_clicked()
     GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
 
     OutputCSV Salida;
-    Salida.crearCSV(csv);
+    QString filename= QFileDialog::getSaveFileName(this, tr("Guardar como"),"",tr("Archivo .csv (*.csv);;"));
+    Salida.crearCSV(csv,filename);
 
 }
 

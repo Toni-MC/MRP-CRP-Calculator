@@ -1,5 +1,4 @@
 #include "outputcsv.h"
-#include "mrp.h"
 
 OutputCSV::OutputCSV()
 {
@@ -7,9 +6,8 @@ OutputCSV::OutputCSV()
 }
 
 
-void OutputCSV::crearCSV(GLOBAL Datos){
+void OutputCSV::crearCSV(GLOBAL Datos,QString filename){
 
-    QString filename= QFileDialog::getSaveFileName(this, tr("Guardar como"),"",tr("Archivo .csv (*.csv);;"));
     Valores = Datos.get_Valor();
 
     QFile file(filename);
@@ -21,35 +19,43 @@ void OutputCSV::crearCSV(GLOBAL Datos){
 
     // Primera linea
     stream << " " << ",";
-    for (int i=0; i<=7; i++) stream << i << ",";
+    for (int i=1; i<=8; i++) stream << i << ",";
     stream << "\n";
 
     // Segunda linea
-    for (unsigned i=0; i<=8; i++) stream << Valores["NB"][i] << ",";
+    stream << "NB" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["NB"][i] << ",";
     stream << "\n";
 
     // Tercera
-    for (unsigned i=0; i<=8; i++) stream << Valores["D"][i] << ",";
+    stream << "D" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["D"][i] << ",";
     stream << "\n";
 
     // Cuarta
-    for (unsigned i=0; i<=8; i++) stream << Valores["RP"][i] << ",";
+    stream << "RP" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["RP"][i] << ",";
     stream << "\n";
 
     // Quinta
-    for (unsigned i=0; i<=8; i++) stream << Valores["NN"][i] << ",";
+    stream << "NN" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["NN"][i] << ",";
     stream << "\n";
 
     // Sexta
-    for (unsigned i=0; i<=8; i++) stream << Valores["RPP"][i] << ",";
+    stream << "RPPL" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["RPPL"][i] << ",";
     stream << "\n";
 
     // Septima
-    for (unsigned i=0; i<=8; i++) stream << Valores["LPP"][i] << ",";
+    stream << "LPPL" <<",";
+    for (unsigned i=0; i<8; i++) stream << Valores["LPPL"][i] << ",";
     stream << "\n";
 
+
     // Octava
-    for (unsigned i=0; i<=8; i++) stream << Valores["CT"][i] << ",";
+    stream << "CT" <<",";
+    stream << Valores["CT"][0] << ",";
     stream << "\n";
 
 
