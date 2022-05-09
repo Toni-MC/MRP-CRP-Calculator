@@ -30,7 +30,7 @@ void CRP::on_SALIR_clicked()
     close();
 }
 
-vector<int> CT(6),te(6),PPA(8),tmp(6),PPB(8),ACT1(15),ACT2(15),BCT1(15),BCT2(15),Total1(15),Total2(15);
+vector<int> CT(6),te(6),PPA(8),tmp(6),PPB(15),ACT1(15),ACT2(15),BCT1(15),BCT2(15),Total1(15),Total2(15);
 vector<float> tc,a(6);
 int tsa,tsb,QA,QB;
 float A1,A2,B1,B2,TCA1,TCA2,TCB1,TCB2, Aa=1,Ab=1;
@@ -86,14 +86,14 @@ void CRP::on_Ejecutar_clicked()
 
     PPA={stoi(PPA_1),stoi(PPA_2),stoi(PPA_3),stoi(PPA_4),stoi(PPA_5),stoi(PPA_6),stoi(PPA_7),stoi(PPA_8)};
 
-    QString _PPB_1 = ui->PPB_1->text(); string PPB_1=_PPA_1.toStdString();
-    QString _PPB_2 = ui->PPB_2->text(); string PPB_2=_PPA_2.toStdString();
-    QString _PPB_3 = ui->PPB_3->text(); string PPB_3=_PPA_3.toStdString();
-    QString _PPB_4 = ui->PPB_4->text(); string PPB_4=_PPA_4.toStdString();
-    QString _PPB_5 = ui->PPB_5->text(); string PPB_5=_PPA_5.toStdString();
-    QString _PPB_6 = ui->PPB_6->text(); string PPB_6=_PPA_6.toStdString();
-    QString _PPB_7 = ui->PPB_7->text(); string PPB_7=_PPA_7.toStdString();
-    QString _PPB_8 = ui->PPB_8->text(); string PPB_8=_PPA_8.toStdString();
+    QString _PPB_1 = ui->PPB_1->text(); string PPB_1=_PPB_1.toStdString();
+    QString _PPB_2 = ui->PPB_2->text(); string PPB_2=_PPB_2.toStdString();
+    QString _PPB_3 = ui->PPB_3->text(); string PPB_3=_PPB_3.toStdString();
+    QString _PPB_4 = ui->PPB_4->text(); string PPB_4=_PPB_4.toStdString();
+    QString _PPB_5 = ui->PPB_5->text(); string PPB_5=_PPB_5.toStdString();
+    QString _PPB_6 = ui->PPB_6->text(); string PPB_6=_PPB_6.toStdString();
+    QString _PPB_7 = ui->PPB_7->text(); string PPB_7=_PPB_7.toStdString();
+    QString _PPB_8 = ui->PPB_8->text(); string PPB_8=_PPB_8.toStdString();
 
     PPB={stoi(PPB_1),stoi(PPB_2),stoi(PPB_3),stoi(PPB_4),stoi(PPB_5),stoi(PPB_6),stoi(PPB_7),stoi(PPB_8)};
 
@@ -200,24 +200,19 @@ void CRP::on_Ejecutar_clicked()
     B2= (TCB2*QB*Ab)/(float)tsb;
 
     //Emisión de lotes para cada CT para cada producto
-    ACT1.at(0)=0;
-    ACT2.at(0)=0;
-    BCT1.at(0)=0;
-    BCT2.at(0)=0;
-
-    for (int j=1; j<8; j++){
+    for (int j=0; j<8; j++){
         //Producto A
         if (PPA.at(j)!=0){
             for (int k=0; k<tsa; k++){
-                ACT1.at(k+j)=ACT1.at(k+j)+A1;
-                ACT2.at(k+j)=ACT2.at(k+j)+A2;
+                ACT1.at(k+j+1)=ACT1.at(k+j+1)+A1;
+                ACT2.at(k+j+1)=ACT2.at(k+j+1)+A2;
             }
         }
         //Producto B
         if (PPB.at(j)!=0){
             for (int k=0; k<tsb; k++){
-                BCT1.at(k+j)=BCT1.at(k+j)+B1;
-                BCT2.at(k+j)=BCT2.at(k+j)+B2;
+                BCT1.at(k+j+1)=BCT1.at(k+j+1)+B1;
+                BCT2.at(k+j+1)=BCT2.at(k+j+1)+B2;
             }
         }
     }
@@ -226,8 +221,22 @@ void CRP::on_Ejecutar_clicked()
         Total2.at(i)=ACT2.at(i)+BCT2.at(i);
     }
     actualizarui();
-}
+    //Vaciar vectores
+    TCA1=0;
+    TCB1=0;
+    TCA2=0;
+    TCB2=0;
+    for(int i=0;i<15;i++){
+        ACT1.at(i)=0;
+        ACT2.at(i)=0;
+        BCT1.at(i)=0;
+        BCT2.at(i)=0;
+    }
 
+
+
+
+}
 void CRP::actualizarui(){
     //tcijk
     ui->tc1->setText(QString::number(tc.at(0)));
@@ -306,6 +315,8 @@ void CRP::actualizarui(){
     ui->T2_6->setText(QString::number(Total2.at(5)));
     ui->T2_7->setText(QString::number(Total2.at(6)));
     ui->T2_8->setText(QString::number(Total2.at(7)));
+
+
 
 }
 

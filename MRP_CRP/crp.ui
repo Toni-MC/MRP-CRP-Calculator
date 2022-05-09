@@ -16,10 +16,10 @@
   <widget class="QWidget" name="centralwidget" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>10</x>
+     <y>30</y>
      <width>1471</width>
-     <height>901</height>
+     <height>921</height>
     </rect>
    </property>
    <widget class="QLabel" name="label">
@@ -601,9 +601,9 @@
    <widget class="QLineEdit" name="tc5">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>240</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -619,9 +619,9 @@
    <widget class="QLineEdit" name="tc2">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>120</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -637,9 +637,9 @@
    <widget class="QLineEdit" name="tc6">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>280</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -655,9 +655,9 @@
    <widget class="QLineEdit" name="tc4">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>200</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -673,9 +673,9 @@
    <widget class="QLineEdit" name="tc1">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>80</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -691,9 +691,9 @@
    <widget class="QLineEdit" name="tc3">
     <property name="geometry">
      <rect>
-      <x>1330</x>
+      <x>1300</x>
       <y>160</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -1185,7 +1185,7 @@
    <widget class="QLabel" name="label_31">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>580</y>
       <width>111</width>
       <height>31</height>
@@ -1203,7 +1203,7 @@
    <widget class="QLabel" name="label_32">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>70</x>
       <y>520</y>
       <width>111</width>
       <height>31</height>
@@ -1221,7 +1221,7 @@
    <widget class="QLabel" name="label_33">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>90</x>
       <y>560</y>
       <width>51</width>
       <height>31</height>
@@ -1239,7 +1239,7 @@
    <widget class="QLabel" name="label_34">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>90</x>
       <y>610</y>
       <width>51</width>
       <height>31</height>
@@ -1583,7 +1583,7 @@
      <rect>
       <x>340</x>
       <y>610</y>
-      <width>81</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -1599,9 +1599,9 @@
    <widget class="QLineEdit" name="TCB1">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>130</x>
       <y>610</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -1617,9 +1617,9 @@
    <widget class="QLineEdit" name="TC1A">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>130</x>
       <y>560</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -1655,7 +1655,7 @@
      <rect>
       <x>340</x>
       <y>560</y>
-      <width>81</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -2121,9 +2121,9 @@
    <widget class="QLineEdit" name="TC2A">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>130</x>
       <y>750</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -2195,7 +2195,7 @@
      <rect>
       <x>340</x>
       <y>800</y>
-      <width>81</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -2357,7 +2357,7 @@
      <rect>
       <x>340</x>
       <y>750</y>
-      <width>81</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
@@ -2373,9 +2373,9 @@
    <widget class="QLineEdit" name="TC2B">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>130</x>
       <y>800</y>
-      <width>81</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -2679,7 +2679,7 @@
    <widget class="QLabel" name="label_43">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>80</x>
       <y>800</y>
       <width>51</width>
       <height>31</height>
@@ -2715,7 +2715,7 @@
    <widget class="QLabel" name="label_44">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>770</y>
       <width>111</width>
       <height>31</height>
@@ -2751,7 +2751,7 @@
    <widget class="QLabel" name="label_45">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>80</x>
       <y>750</y>
       <width>51</width>
       <height>31</height>
@@ -2787,7 +2787,7 @@
    <widget class="QLabel" name="label_46">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>70</x>
       <y>710</y>
       <width>111</width>
       <height>31</height>
