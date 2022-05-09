@@ -37,21 +37,21 @@ void CRP::on_Ejecutar_clicked()
 {
     //Primero se guardan todos los datos del ui en los vectores y variables
     QString _CT1 = ui->CT1->text(); string CT1=_CT1.toStdString();
-    QString _CT2 = ui->CT1->text(); string CT2=_CT2.toStdString();
-    QString _CT3 = ui->CT1->text(); string CT3=_CT3.toStdString();
-    QString _CT4 = ui->CT1->text(); string CT4=_CT4.toStdString();
-    QString _CT5 = ui->CT1->text(); string CT5=_CT5.toStdString();
-    QString _CT6 = ui->CT1->text(); string CT6=_CT6.toStdString();
+    QString _CT2 = ui->CT2->text(); string CT2=_CT2.toStdString();
+    QString _CT3 = ui->CT3->text(); string CT3=_CT3.toStdString();
+    QString _CT4 = ui->CT4->text(); string CT4=_CT4.toStdString();
+    QString _CT5 = ui->CT5->text(); string CT5=_CT5.toStdString();
+    QString _CT6 = ui->CT6->text(); string CT6=_CT6.toStdString();
 
     CT={stoi(CT1),stoi(CT2),stoi(CT3),stoi(CT4),stoi(CT5),stoi(CT6)};
 
 
     QString _te1 = ui->te1->text(); string te1=_te1.toStdString();
-    QString _te2 = ui->te1->text(); string te2=_te2.toStdString();
-    QString _te3 = ui->te1->text(); string te3=_te3.toStdString();
-    QString _te4 = ui->te1->text(); string te4=_te4.toStdString();
-    QString _te5 = ui->te1->text(); string te5=_te5.toStdString();
-    QString _te6 = ui->te1->text(); string te6=_te6.toStdString();
+    QString _te2 = ui->te2->text(); string te2=_te2.toStdString();
+    QString _te3 = ui->te3->text(); string te3=_te3.toStdString();
+    QString _te4 = ui->te4->text(); string te4=_te4.toStdString();
+    QString _te5 = ui->te5->text(); string te5=_te5.toStdString();
+    QString _te6 = ui->te6->text(); string te6=_te6.toStdString();
 
     te={stoi(te1),stoi(te2),stoi(te3),stoi(te4),stoi(te5),stoi(te6)};
 
@@ -140,9 +140,13 @@ void CRP::on_Ejecutar_clicked()
     //Método con sólo iteradores y sin .at()
     vector<int>::iterator e,p,t;
     vector<float>::iterator it;
-    p= tmp.begin(); t= CT.begin();  it= a.begin();
+    vector<float> vi={a.at(0)*a.at(1)*a.at(2),a.at(1)*a.at(2),a.at(2),a.at(3)*a.at(4)*a.at(5),a.at(4)*a.at(5),a.at(5)};
+    p= tmp.begin(); t= CT.begin();  it= vi.begin();
     int i= 0;
     float num= 0;
+
+
+
     for(e= te.begin(); e!= te.end(); e++){
         if(i<3){
 
@@ -157,8 +161,6 @@ void CRP::on_Ejecutar_clicked()
             else{
                 TCA2=TCA2+num/(*it);
             }
-            //Cálculo de Aa
-            Aa= Aa*(*it);
             i++;
             p++;
             t++;
@@ -176,9 +178,7 @@ void CRP::on_Ejecutar_clicked()
             }
             else{
                 TCB2=TCB2+num/(*it);
-            }
-            //Cálculo de Ab
-            Ab= Ab*(*it);
+            }         
             i++;
             p++;
             t++;
@@ -186,6 +186,10 @@ void CRP::on_Ejecutar_clicked()
         }
 
     }
+    //Cálculo de Aa
+    Aa= vi.at(0);
+    //Cálculo de Ab
+    Ab= vi.at(3);
 
     //Cálculo del valor del lote
     A1= (TCA1*QA*Aa)/(float)tsa;
@@ -194,7 +198,12 @@ void CRP::on_Ejecutar_clicked()
     B2= (TCB2*QB*Ab)/(float)tsb;
 
     //Emisión de lotes para cada CT para cada producto
-    for (int j=0; j<8; j++){
+    ACT1.at(0)=0;
+    ACT2.at(0)=0;
+    BCT1.at(0)=0;
+    BCT2.at(0)=0;
+
+    for (int j=1; j<8; j++){
         //Producto A
         if (PPA.at(j)!=0){
             for (int k=0; k<tsa; k++){
@@ -225,6 +234,12 @@ void CRP::actualizarui(){
     ui->tc4->setText(QString::number(tc.at(3)));
     ui->tc5->setText(QString::number(tc.at(4)));
     ui->tc6->setText(QString::number(tc.at(5)));
+
+    //TC
+    ui->TC1A->setText(QString::number(TCA1));
+    ui->TCB1->setText(QString::number(TCB1));
+    ui->TC2A->setText(QString::number(TCA2));
+    ui->TC2B->setText(QString::number(TCB2));
 
     //Aj
     ui->AJA1->setText(QString::number(Aa));
