@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "crp.h"
 
 #include <QApplication>
 

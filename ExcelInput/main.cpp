@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 
+
 using namespace std;
 int main()
 {
@@ -13,7 +14,12 @@ int main()
 
     vector<string> NN;
     vector<string> D;
-    vector<string> RecProg;
+    vector<string> RP;
+    vector<string> SS;
+    vector<string> Ts;
+    vector<string> S;
+    vector<string> H;
+
     vector<string> row;
 
     string line, word;
@@ -31,7 +37,11 @@ int main()
 
             if (row[0]=="NN")       NN=row;
             if (row[0]=="D")        D=row;
-            if (row[0]=="R.Prog")   RecProg=row;
+            if (row[0]=="RP")       RP=row;
+            if (row[0]=="SS")       SS=row;
+            if (row[0]=="T")       Ts=row;
+            if (row[0]=="S")        S=row;
+            if (row[0]=="H")        H=row;
 
             content.push_back(row); // Para vector de vectores
         }
@@ -45,8 +55,21 @@ int main()
     for(unsigned i=0;i<D.size();i++) cout<<D[i]<<" ";
     cout << endl;
 
-    for(unsigned i=0;i<RecProg.size();i++) cout<<RecProg[i]<<" ";
+    for(unsigned i=0;i<RP.size();i++) cout<<RP[i]<<" ";
     cout << endl;
+
+    for(unsigned i=0;i<SS.size();i++) cout<<SS[i]<<" ";
+    cout << endl;
+
+    for(unsigned i=0;i<Ts.size();i++) cout<<Ts[i]<<" ";
+    cout << endl;
+
+    for(unsigned i=0;i<S.size();i++) cout<<S[i]<<" ";
+    cout << endl;
+
+    for(unsigned i=0;i<H.size();i++) cout<<H[i]<<" ";
+    cout << endl;
+
 
 
     // Vector de vectores

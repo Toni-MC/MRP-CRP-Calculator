@@ -1,10 +1,9 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CRP_H
+#define CRP_H
 
 #include <QMainWindow>
-#include <QtSql>
 #include <QInputDialog>
-#include <qfiledialog.h>
+#include <QFileDialog>
 #include <iostream>
 #include <list>
 
@@ -24,31 +23,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_Salir_clicked();
-
-    void on_pushButton_clicked();
+    void on_SALIR_clicked();
 
     void on_Ejecutar_clicked();
 
-    void LaL(int a);
+    void actualizarui();
 
-    void PCTE();
-
-    void EOQ();
-
-    void POQ();
-
-    void PF();
-
-    void MCU();
-
-    void MCT();
-
-    void SM();
-
-    void actualizarui(int lotes, int a);
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase m_db;
 };
-#endif // MAINWINDOW_H
+#endif // CRP_H
