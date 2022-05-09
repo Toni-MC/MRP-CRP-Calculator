@@ -8,6 +8,7 @@
 #include "rpplp.h"
 #include "lpplp.h"
 #include "global.h"
+#include "outputcsv.h"
 
 MRP::MRP(QWidget *parent)
     : QMainWindow(parent)
@@ -1284,6 +1285,9 @@ void MRP::on_Exportar_clicked()
     LPPLP Lpplp;
     vector<QString> Ctp = {ui->CosteTotal->text()};
     GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
+
+    OutputCSV Salida;
+    Salida.crearCSV(csv);
 
 }
 

@@ -1,4 +1,5 @@
 #include "outputcsv.h"
+#include "mrp.h"
 
 OutputCSV::OutputCSV()
 {
@@ -8,8 +9,12 @@ OutputCSV::OutputCSV()
 
 void OutputCSV::crearCSV(GLOBAL Datos){
 
+    QString filename= QFileDialog::getSaveFileName(this, tr("Guardar como"),"",tr("Archivo .csv (*.csv);;"));
     Valores = Datos.get_Valor();
-    QFile file("./file.csv");
+
+    QFile file(filename);
+
+
     if (file.open(QFile::WriteOnly|QFile::Truncate))
     {
     QTextStream stream(&file);

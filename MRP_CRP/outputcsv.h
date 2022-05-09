@@ -9,6 +9,9 @@
 #include <QString>
 #include <QTextStream>
 #include "global.h"
+#include <QFileDialog>
+#include <QInputDialog>
+
 
 using namespace std;
 

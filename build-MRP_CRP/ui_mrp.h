@@ -132,6 +132,7 @@ public:
     QLabel *label_20;
     QLineEdit *Ts;
     QPushButton *pushButton_CRP;
+    QPushButton *Exportar;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -683,10 +684,14 @@ public:
         pushButton_CRP->setObjectName(QString::fromUtf8("pushButton_CRP"));
         pushButton_CRP->setGeometry(QRect(1130, 80, 121, 71));
         pushButton_CRP->setFont(font);
+        Exportar = new QPushButton(centralwidget);
+        Exportar->setObjectName(QString::fromUtf8("Exportar"));
+        Exportar->setGeometry(QRect(610, 560, 351, 71));
+        Exportar->setFont(font2);
         MRP->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MRP);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1312, 20));
+        menubar->setGeometry(QRect(0, 0, 1312, 21));
         MRP->setMenuBar(menubar);
         statusbar = new QStatusBar(MRP);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -778,6 +783,7 @@ public:
         label_20->setText(QApplication::translate("MRP", "Tiempo de Suministro", nullptr));
         Ts->setText(QApplication::translate("MRP", "1", nullptr));
         pushButton_CRP->setText(QApplication::translate("MRP", "CRP", nullptr));
+        Exportar->setText(QApplication::translate("MRP", "Exportar Archivo Excel", nullptr));
     } // retranslateUi
 
 };
