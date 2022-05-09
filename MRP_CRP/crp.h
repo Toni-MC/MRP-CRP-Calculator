@@ -7,6 +7,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <QFile>
 
 using namespace std;
 using std::stoi;
@@ -35,6 +36,12 @@ private slots:
     void on_Ejecutar_clicked();
 
     void actualizarui();
+
+    void on_pushButton_ExcelA_clicked();
+
+    void on_pushButton_ExcelB_clicked();
+
+    void on_pushButton_ExcelComun_clicked();
 
 private:
     Ui::CRP *ui;

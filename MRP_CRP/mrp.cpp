@@ -40,7 +40,7 @@ void MRP::on_pushButton_Excel_clicked(){
     file.readLine(); // read first line and ignore
 
     while (!file.atEnd()) {
-        QString line = file.readLine(); // read wavelength line and store it
+        QString line = file.readLine();
         row= line.split(',').toVector().toStdVector();
 
         if (row[0]=="NB")       NB=row;
@@ -1159,6 +1159,7 @@ void MRP::on_pushButton_CRP_clicked()
     LPP[7]=ui->LPPL8->text().toInt();
 
     CRP m(Ts,LPP,this);
+    m.setModal(true);
     m.exec();
 }
 

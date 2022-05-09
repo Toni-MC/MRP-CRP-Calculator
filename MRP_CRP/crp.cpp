@@ -241,3 +241,161 @@ void CRP::actualizarui(){
     ui->T2_8->setText(QString::number(Total2.at(7)));
 
 }
+
+void CRP::on_pushButton_ExcelA_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,tr("Selecciona la base de Datos"), "",tr("Archivo .csv (*.csv)"));
+
+    vector<QString> Ts;
+    vector<QString> Qej;
+    vector<QString> PPL;
+    vector<QString> row;
+
+    string line, word;
+
+    QFile file (filename);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return;
+
+    while (!file.atEnd()) {
+        QString line = file.readLine();
+        row= line.split(',').toVector().toStdVector();
+
+        if (row[0]=="Ts")       Ts=row;
+        if (row[0]=="Qej")      Qej=row;
+        if (row[0]=="PPL")      PPL=row;
+
+    }
+    // Ts
+    ui->TsA->setText(Ts[1]);
+
+    // Qej
+    ui->QeA->setText(Qej[1]);
+
+    // PPL
+    ui->PPA_1->setText(PPL[1]);
+    ui->PPA_2->setText(PPL[2]);
+    ui->PPA_3->setText(PPL[3]);
+    ui->PPA_4->setText(PPL[4]);
+    ui->PPA_5->setText(PPL[5]);
+    ui->PPA_6->setText(PPL[6]);
+    ui->PPA_7->setText(PPL[7]);
+    ui->PPA_8->setText(PPL[8]);
+
+    file.close();
+}
+
+
+void CRP::on_pushButton_ExcelB_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,tr("Selecciona la base de Datos"), "",tr("Archivo .csv (*.csv)"));
+
+    vector<QString> Ts;
+    vector<QString> Qej;
+    vector<QString> PPL;
+    vector<QString> row;
+
+    string line, word;
+
+    QFile file (filename);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return;
+
+    while (!file.atEnd()) {
+        QString line = file.readLine();
+        row= line.split(',').toVector().toStdVector();
+
+        if (row[0]=="Ts")       Ts=row;
+        if (row[0]=="Qej")      Qej=row;
+        if (row[0]=="PPL")      PPL=row;
+
+    }
+    // Ts
+    ui->TsB->setText(Ts[1]);
+
+    // Qej
+    ui->QeB->setText(Qej[1]);
+
+    // PPL
+    ui->PPB_1->setText(PPL[1]);
+    ui->PPB_2->setText(PPL[2]);
+    ui->PPB_3->setText(PPL[3]);
+    ui->PPB_4->setText(PPL[4]);
+    ui->PPB_5->setText(PPL[5]);
+    ui->PPB_6->setText(PPL[6]);
+    ui->PPB_7->setText(PPL[7]);
+    ui->PPB_8->setText(PPL[8]);
+
+    file.close();
+}
+
+
+void CRP::on_pushButton_ExcelComun_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,tr("Selecciona la base de Datos"), "",tr("Archivo .csv (*.csv)"));
+
+    vector<QString> Ts;
+    vector<QString> Qej;
+    vector<QString> CTk;
+    vector<QString> tei;
+    vector<QString> tmp;
+    vector<QString> ai;
+    vector<QString> PPL;
+    vector<QString> row;
+
+    string line, word;
+
+    QFile file (filename);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+            return;
+
+    while (!file.atEnd()) {
+        QString line = file.readLine();
+        row= line.split(',').toVector().toStdVector();
+
+        if (row[0]=="CTk")      CTk=row;
+        if (row[0]=="tei")      tei=row;
+        if (row[0]=="tmp")      tmp=row;
+        if (row[0]=="ai")       ai=row;
+
+    }
+
+    // CTk
+    ui->CT1->setText(CTk[1]);
+    ui->CT2->setText(CTk[2]);
+    ui->CT3->setText(CTk[3]);
+    ui->CT4->setText(CTk[4]);
+    ui->CT5->setText(CTk[5]);
+    ui->CT6->setText(CTk[6]);
+
+    // tei
+    ui->te1->setText(tei[1]);
+    ui->te2->setText(tei[2]);
+    ui->te3->setText(tei[3]);
+    ui->te4->setText(tei[4]);
+    ui->te5->setText(tei[5]);
+    ui->te6->setText(tei[6]);
+
+    // tmp
+    ui->tmp1->setText(tmp[1]);
+    ui->tmp2->setText(tmp[2]);
+    ui->tmp3->setText(tmp[3]);
+    ui->tmp4->setText(tmp[4]);
+    ui->tmp5->setText(tmp[5]);
+    ui->tmp6->setText(tmp[6]);
+
+    // ai
+    ui->a1->setText(ai[1]);
+    ui->a2->setText(ai[2]);
+    ui->a3->setText(ai[3]);
+    ui->a4->setText(ai[4]);
+    ui->a5->setText(ai[5]);
+    ui->a6->setText(ai[6]);
+
+
+    file.close();
+}
+

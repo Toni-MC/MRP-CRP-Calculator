@@ -13,7 +13,15 @@
   <property name="windowTitle">
    <string>CRP</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="centralwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1471</width>
+     <height>901</height>
+    </rect>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -899,9 +907,9 @@
    <widget class="QCommandLinkButton" name="SALIR">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>200</y>
-      <width>172</width>
+      <x>30</x>
+      <y>300</y>
+      <width>81</width>
       <height>41</height>
      </rect>
     </property>
@@ -912,8 +920,8 @@
    <widget class="QPushButton" name="Ejecutar">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>130</y>
+      <x>90</x>
+      <y>170</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -2902,6 +2910,45 @@
      <string>185</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_ExcelA">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Datos A desde .csv</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ExcelB">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>240</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Datos B desde .csv</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ExcelComun">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>300</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Datos  comunesCRP</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -2913,7 +2960,16 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>3</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
