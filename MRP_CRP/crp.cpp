@@ -1,11 +1,13 @@
 #include "crp.h"
 #include "ui_crp.h"
 
-CRP::CRP(int Ts, vector<int> &vec, QWidget *parent) :
+CRP::CRP(int Ts, vector<int> &vec, int Qej, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CRP)
 {
     ui->setupUi(this);
+
+    ui->QeA->setText(QString::number(Qej));
     ui->TsA->setText(QString::number(Ts));
     ui->PPA_1->setText(QString::number(vec[0]));
     ui->PPA_2->setText(QString::number(vec[1]));
@@ -256,7 +258,7 @@ void CRP::actualizarui(){
     //CT1
     ui->CT1A_1->setText(QString::number(ACT1.at(0)));
     ui->T1_1->setText(QString::number(Total1.at(0)));
-    ui->CT2A_1->setText(QString::number(ACT2.at(0)));
+    ui->CT1B_1->setText(QString::number(BCT1.at(0)));
     ui->CT1A_2->setText(QString::number(ACT1.at(1)));
     ui->CT1B_2->setText(QString::number(BCT1.at(1)));
     ui->T1_2->setText(QString::number(Total1.at(1)));
@@ -314,7 +316,7 @@ void CRP::on_pushButton_ExcelA_clicked()
     vector<QString> Ts;
     vector<QString> Qej;
     vector<QString> PPL;
-    vector<QString> row;
+    vector<QString> row(9);
 
     string line, word;
 
@@ -325,7 +327,14 @@ void CRP::on_pushButton_ExcelA_clicked()
 
     while (!file.atEnd()) {
         QString line = file.readLine();
-        row= line.split(',').toVector().toStdVector();
+
+        // Sólo valido para Qt 5.12.12 y anteriores
+        // la función de Qvector, toStdVector no está disponible
+        // a partir de Qt.6
+        // row= line.split(',').toVector().toStdVector();
+
+        QVector<QString> rowaux=line.split(',').toVector();
+        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
 
         if (row[0]=="Ts")       Ts=row;
         if (row[0]=="Qej")      Qej=row;
@@ -359,7 +368,7 @@ void CRP::on_pushButton_ExcelB_clicked()
     vector<QString> Ts;
     vector<QString> Qej;
     vector<QString> PPL;
-    vector<QString> row;
+    vector<QString> row(9);
 
     string line, word;
 
@@ -370,7 +379,14 @@ void CRP::on_pushButton_ExcelB_clicked()
 
     while (!file.atEnd()) {
         QString line = file.readLine();
-        row= line.split(',').toVector().toStdVector();
+
+        // Sólo valido para Qt 5.12.12 y anteriores
+        // la función de Qvector, toStdVector no está disponible
+        // a partir de Qt.6
+        // row= line.split(',').toVector().toStdVector();
+
+        QVector<QString> rowaux=line.split(',').toVector();
+        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
 
         if (row[0]=="Ts")       Ts=row;
         if (row[0]=="Qej")      Qej=row;
@@ -408,7 +424,7 @@ void CRP::on_pushButton_ExcelComun_clicked()
     vector<QString> tmpp;
     vector<QString> ai;
     vector<QString> PPL;
-    vector<QString> row;
+    vector<QString> row(9);
 
     string line, word;
 
@@ -419,7 +435,14 @@ void CRP::on_pushButton_ExcelComun_clicked()
 
     while (!file.atEnd()) {
         QString line = file.readLine();
-        row= line.split(',').toVector().toStdVector();
+
+        // Sólo valido para Qt 5.12.12 y anteriores
+        // la función de Qvector, toStdVector no está disponible
+        // a partir de Qt.6
+        // row= line.split(',').toVector().toStdVector();
+
+        QVector<QString> rowaux=line.split(',').toVector();
+        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
 
         if (row[0]=="CTk")      CTk=row;
         if (row[0]=="tei")      tei=row;

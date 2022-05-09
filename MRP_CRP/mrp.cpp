@@ -7,6 +7,7 @@ MRP::MRP(QWidget *parent)
     , ui(new Ui::MRP)
 {
     ui->setupUi(this);
+    ui->pushButton_CRP->show();
 }
 
 MRP::~MRP()
@@ -29,9 +30,7 @@ void MRP::on_pushButton_Excel_clicked(){
     vector<QString> Ts;
     vector<QString> S;
     vector<QString> H;
-    vector<QString> row;
-
-    string line, word;
+    vector<QString> row(9);
 
     QFile file (filename);
 
@@ -41,7 +40,14 @@ void MRP::on_pushButton_Excel_clicked(){
 
     while (!file.atEnd()) {
         QString line = file.readLine();
-        row= line.split(',').toVector().toStdVector();
+
+        // Sólo valido para Qt 5.12.12 y anteriores
+        // la función de Qvector, toStdVector no está disponible
+        // a partir de Qt.6
+        // row= line.split(',').toVector().toStdVector();
+
+        QVector<QString> rowaux=line.split(',').toVector();
+        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
 
         if (row[0]=="NB")       NB=row;
         if (row[0]=="D")        D=row;
@@ -548,6 +554,14 @@ void MRP::actualizarui(int lotes, int a){
     }
     CT = lotes*S+CP;
     ui->CosteTotal->setText(QString::number(CT));
+
+    j = LPPL.begin();
+    while (*j==0) {
+        Lote=*j;    j++;
+    };
+
+
+
 
     //Vaciamos los vectores RPPL y LPPL para reescribirlos en el proceso que corresponda
     j = RPPL.begin();
@@ -1148,6 +1162,8 @@ void MRP::SM(){
 void MRP::on_pushButton_CRP_clicked()
 {
     int Ts = ui->Ts->text().toInt();
+    int Qej,i=0;
+
     vector<int> LPP(8,0);
     LPP[0]=ui->LPPL1->text().toInt();
     LPP[1]=ui->LPPL2->text().toInt();
@@ -1158,7 +1174,12 @@ void MRP::on_pushButton_CRP_clicked()
     LPP[6]=ui->LPPL7->text().toInt();
     LPP[7]=ui->LPPL8->text().toInt();
 
-    CRP m(Ts,LPP,this);
+    //for (int i=0; i<=8; i++) if (LPP[i]!=0) Qej=LPP[i];
+    while (LPP[i]==0) i++;
+    Qej=LPP[i];
+    cout << Qej << endl;
+
+    CRP m(Ts,LPP,Qej,this);
     m.setModal(true);
     m.exec();
 }

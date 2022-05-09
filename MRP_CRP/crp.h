@@ -21,7 +21,7 @@ class CRP : public QDialog
     Q_OBJECT
 
 public:
-    explicit CRP(int Ts,vector<int> &vec, QWidget *parent = nullptr);
+    explicit CRP(int Ts,vector<int> &vec,int Qej, QWidget *parent = nullptr);
     ~CRP();
 
     /*

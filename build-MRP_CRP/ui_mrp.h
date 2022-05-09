@@ -131,6 +131,7 @@ public:
     QVBoxLayout *verticalLayout_12;
     QLabel *label_20;
     QLineEdit *Ts;
+    QPushButton *pushButton_CRP;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -678,6 +679,10 @@ public:
 
         verticalLayout_12->addWidget(Ts);
 
+        pushButton_CRP = new QPushButton(centralwidget);
+        pushButton_CRP->setObjectName(QString::fromUtf8("pushButton_CRP"));
+        pushButton_CRP->setGeometry(QRect(1130, 80, 121, 71));
+        pushButton_CRP->setFont(font);
         MRP->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MRP);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -694,7 +699,7 @@ public:
 
     void retranslateUi(QMainWindow *MRP)
     {
-        MRP->setWindowTitle(QApplication::translate("MRP", "MainWindow", nullptr));
+        MRP->setWindowTitle(QApplication::translate("MRP", "MRP", nullptr));
         label_4->setText(QApplication::translate("MRP", "4", nullptr));
         NB4->setText(QApplication::translate("MRP", "200", nullptr));
         D4->setText(QString());
@@ -772,6 +777,7 @@ public:
         SS->setText(QApplication::translate("MRP", "40", nullptr));
         label_20->setText(QApplication::translate("MRP", "Tiempo de Suministro", nullptr));
         Ts->setText(QApplication::translate("MRP", "1", nullptr));
+        pushButton_CRP->setText(QApplication::translate("MRP", "CRP", nullptr));
     } // retranslateUi
 
 };

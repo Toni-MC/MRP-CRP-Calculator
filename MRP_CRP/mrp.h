@@ -32,7 +32,7 @@ public:
     ~MRP();
 
     list<int> NN,RPPL,LPPL,D,RP,NB;
-    int Ts, SS, S, H;
+    int Ts, SS, S, H, Lote;
 
 private slots:
     void on_Salir_clicked();
