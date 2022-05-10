@@ -10,6 +10,7 @@
 #define UI_MRP_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QGridLayout>
@@ -141,6 +142,9 @@ public:
         if (MRP->objectName().isEmpty())
             MRP->setObjectName(QString::fromUtf8("MRP"));
         MRP->resize(1312, 674);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix1/Rob-Sanders-Gear.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MRP->setWindowIcon(icon);
         centralwidget = new QWidget(MRP);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         layoutWidget_3 = new QWidget(centralwidget);
@@ -691,7 +695,7 @@ public:
         MRP->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MRP);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1312, 21));
+        menubar->setGeometry(QRect(0, 0, 1312, 20));
         MRP->setMenuBar(menubar);
         statusbar = new QStatusBar(MRP);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -770,7 +774,7 @@ public:
         label_14->setText(QApplication::translate("MRP", "Recepci\303\263n de Pedidos Planificados", nullptr));
         label_15->setText(QApplication::translate("MRP", "Lazamiento de Pedidos Planificados", nullptr));
         Salir->setText(QApplication::translate("MRP", "Salir", nullptr));
-        pushButton_Excel->setText(QApplication::translate("MRP", "Cargar archivo excel", nullptr));
+        pushButton_Excel->setText(QApplication::translate("MRP", "Cargar archivo (.csv)", nullptr));
         label_18->setText(QApplication::translate("MRP", "Coste de posesi\303\263n por unidad y periodo (\342\202\254)", nullptr));
         ValorH->setText(QApplication::translate("MRP", "1", nullptr));
         ValorS->setText(QApplication::translate("MRP", "1500", nullptr));
@@ -783,7 +787,7 @@ public:
         label_20->setText(QApplication::translate("MRP", "Tiempo de Suministro", nullptr));
         Ts->setText(QApplication::translate("MRP", "1", nullptr));
         pushButton_CRP->setText(QApplication::translate("MRP", "CRP", nullptr));
-        Exportar->setText(QApplication::translate("MRP", "Exportar Archivo Excel", nullptr));
+        Exportar->setText(QApplication::translate("MRP", "Exportar archivo (.csv)", nullptr));
     } // retranslateUi
 
 };

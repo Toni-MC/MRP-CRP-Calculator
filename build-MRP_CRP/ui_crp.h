@@ -923,7 +923,7 @@ public:
         label_17->setText(QApplication::translate("CRP", "2", nullptr));
         label_18->setText(QApplication::translate("CRP", "A", nullptr));
         label_19->setText(QApplication::translate("CRP", "B", nullptr));
-        SALIR->setText(QApplication::translate("CRP", "SALIR", nullptr));
+        SALIR->setText(QApplication::translate("CRP", "Salir", nullptr));
         Ejecutar->setText(QApplication::translate("CRP", "EJECUTAR", nullptr));
         label_20->setText(QApplication::translate("CRP", "1", nullptr));
         label_21->setText(QApplication::translate("CRP", "3", nullptr));
@@ -1036,7 +1036,7 @@ public:
         QeB->setText(QApplication::translate("CRP", "185", nullptr));
         pushButton_ExcelA->setText(QApplication::translate("CRP", "Datos A (.csv)", nullptr));
         pushButton_ExcelB->setText(QApplication::translate("CRP", "Datos B (.csv)", nullptr));
-        pushButton_ExcelComun->setText(QApplication::translate("CRP", "Datos  comunes CRP", nullptr));
+        pushButton_ExcelComun->setText(QApplication::translate("CRP", "Datos comunes CRP (.csv)", nullptr));
     } // retranslateUi
 
 };

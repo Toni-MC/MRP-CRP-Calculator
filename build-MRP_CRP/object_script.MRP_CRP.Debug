@@ -9,5 +9,6 @@ debug/nnp.o
 debug/outputcsv.o
 debug/rpp.o
 debug/rpplp.o
+debug/qrc_icono.o
 debug/moc_crp.o
 debug/moc_mrp.o

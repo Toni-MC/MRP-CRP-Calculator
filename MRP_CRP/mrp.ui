@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MRP</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icono.qrc">
+    <normaloff>:/new/prefix1/Rob-Sanders-Gear.ico</normaloff>:/new/prefix1/Rob-Sanders-Gear.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget_3">
     <property name="geometry">
@@ -924,7 +928,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Cargar archivo excel</string>
+     <string>Cargar archivo (.csv)</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -1146,7 +1150,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Exportar Archivo Excel</string>
+     <string>Exportar archivo (.csv)</string>
     </property>
    </widget>
   </widget>
@@ -1156,12 +1160,14 @@
      <x>0</x>
      <y>0</y>
      <width>1312</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="icono.qrc"/>
+ </resources>
  <connections/>
 </ui>

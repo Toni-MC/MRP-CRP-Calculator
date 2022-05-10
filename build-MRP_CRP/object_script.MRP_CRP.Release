@@ -9,5 +9,6 @@ release/nnp.o
 release/outputcsv.o
 release/rpp.o
 release/rpplp.o
+release/qrc_icono.o
 release/moc_crp.o
 release/moc_mrp.o

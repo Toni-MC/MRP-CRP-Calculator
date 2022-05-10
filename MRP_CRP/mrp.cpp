@@ -1268,7 +1268,6 @@ void MRP::on_pushButton_CRP_clicked()
     //for (int i=0; i<=8; i++) if (LPP[i]!=0) Qej=LPP[i];
     while (LPP[i]==0) i++;
     Qej=LPP[i];
-    cout << Qej << endl;
 
     CRP m(Ts,LPP,Qej,this);
     m.setModal(true);
