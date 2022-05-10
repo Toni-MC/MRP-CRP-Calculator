@@ -1027,7 +1027,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Coste total de plan </string>
+        <string>Coste total de plan (€)</string>
        </property>
       </widget>
      </item>

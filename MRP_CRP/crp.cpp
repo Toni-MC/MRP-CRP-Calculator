@@ -84,7 +84,7 @@ void CRP::on_Ejecutar_clicked()
     QString _PPA_7 = ui->PPA_7->text(); string PPA_7=_PPA_7.toStdString();
     QString _PPA_8 = ui->PPA_8->text(); string PPA_8=_PPA_8.toStdString();
 
-    PPA={stoi(PPA_1),stoi(PPA_2),stoi(PPA_3),stoi(PPA_4),stoi(PPA_5),stoi(PPA_6),stoi(PPA_7),stoi(PPA_8)};
+    PPA={stof(PPA_1),stof(PPA_2),stof(PPA_3),stof(PPA_4),stof(PPA_5),stof(PPA_6),stof(PPA_7),stof(PPA_8)};
 
     QString _PPB_1 = ui->PPB_1->text(); string PPB_1=_PPB_1.toStdString();
     QString _PPB_2 = ui->PPB_2->text(); string PPB_2=_PPB_2.toStdString();
@@ -95,7 +95,7 @@ void CRP::on_Ejecutar_clicked()
     QString _PPB_7 = ui->PPB_7->text(); string PPB_7=_PPB_7.toStdString();
     QString _PPB_8 = ui->PPB_8->text(); string PPB_8=_PPB_8.toStdString();
 
-    PPB={stoi(PPB_1),stoi(PPB_2),stoi(PPB_3),stoi(PPB_4),stoi(PPB_5),stoi(PPB_6),stoi(PPB_7),stoi(PPB_8)};
+    PPB={stof(PPB_1),stof(PPB_2),stof(PPB_3),stof(PPB_4),stof(PPB_5),stof(PPB_6),stof(PPB_7),stof(PPB_8)};
 
     QString _QA1 = ui->QeA->text(); string QA1=_QA1.toStdString(); QA=stoi(QA1);
     QString _QB1 = ui->QeB->text(); string QB1=_QB1.toStdString(); QB=stoi(QB1);

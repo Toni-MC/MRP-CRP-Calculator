@@ -340,7 +340,7 @@ void MRP::LaL(int a){
             for (int i=0; i<Ts; i++)
                 rppl++;
         }
-        //El resto de valores serán cero            MAAAAAAAAAAAAAAAAL
+        //El resto de valores serán cero
         if (periodo > 8-Ts){
             LPPL.push_back(0);
         }
@@ -1283,9 +1283,11 @@ void MRP::on_Exportar_clicked()
     RPP Rpp;
     RPPLP Rpplp;
     LPPLP Lpplp;
-    vector<QString> Ctp = {ui->CosteTotal->text()};
-    GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
 
+    vector<QString> Ctp = {ui->CosteTotal->text()};
+//  GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
+
+    GLOBAL csv(Extraer_NB(),Extraer_D(),Extraer_RP(),Extraer_NN(),Extraer_RPPL(),Extraer_LPPL(),Ctp);
     OutputCSV Salida;
     QString filename= QFileDialog::getSaveFileName(this, tr("Guardar como"),"",tr("Archivo .csv (*.csv);;"));
     Salida.crearCSV(csv,filename);

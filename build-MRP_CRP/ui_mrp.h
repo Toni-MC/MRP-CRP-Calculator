@@ -780,7 +780,7 @@ public:
         ValorS->setText(QApplication::translate("MRP", "1500", nullptr));
         label_11->setText(QApplication::translate("MRP", "Coste de emisi\303\263n de un lote (\342\202\254)", nullptr));
         Ejecutar->setText(QApplication::translate("MRP", "Ejecutar", nullptr));
-        label_19->setText(QApplication::translate("MRP", "Coste total de plan ", nullptr));
+        label_19->setText(QApplication::translate("MRP", "Coste total de plan (\342\202\254)", nullptr));
         CosteTotal->setText(QApplication::translate("MRP", "0", nullptr));
         label_16->setText(QApplication::translate("MRP", "Stock de Seguridad", nullptr));
         SS->setText(QApplication::translate("MRP", "40", nullptr));
