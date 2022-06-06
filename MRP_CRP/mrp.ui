@@ -44,7 +44,7 @@
       <widget class="QLineEdit" name="NB4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -56,7 +56,7 @@
       <widget class="QLineEdit" name="D4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -68,7 +68,7 @@
       <widget class="QLineEdit" name="RP4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -80,7 +80,7 @@
       <widget class="QLineEdit" name="NN4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -92,7 +92,7 @@
       <widget class="QLineEdit" name="RPPL4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -104,7 +104,7 @@
       <widget class="QLineEdit" name="LPPL4">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -140,7 +140,7 @@
       <widget class="QLineEdit" name="NB3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -152,7 +152,7 @@
       <widget class="QLineEdit" name="D3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -164,7 +164,7 @@
       <widget class="QLineEdit" name="RP3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -176,7 +176,7 @@
       <widget class="QLineEdit" name="NN3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -188,7 +188,7 @@
       <widget class="QLineEdit" name="RPPL3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -200,7 +200,7 @@
       <widget class="QLineEdit" name="LPPL3">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -236,7 +236,9 @@
       <widget class="QLineEdit" name="NB8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -248,7 +250,7 @@
       <widget class="QLineEdit" name="D8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -260,7 +262,7 @@
       <widget class="QLineEdit" name="RP8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -272,7 +274,7 @@
       <widget class="QLineEdit" name="NN8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -284,7 +286,7 @@
       <widget class="QLineEdit" name="RPPL8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -296,7 +298,7 @@
       <widget class="QLineEdit" name="LPPL8">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -332,7 +334,7 @@
       <widget class="QLineEdit" name="NB7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -344,7 +346,7 @@
       <widget class="QLineEdit" name="D7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -356,7 +358,7 @@
       <widget class="QLineEdit" name="RP7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -368,7 +370,7 @@
       <widget class="QLineEdit" name="NN7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -380,7 +382,7 @@
       <widget class="QLineEdit" name="RPPL7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -392,7 +394,7 @@
       <widget class="QLineEdit" name="LPPL7">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -428,7 +430,7 @@
       <widget class="QLineEdit" name="NB1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -440,7 +442,7 @@
       <widget class="QLineEdit" name="D1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -452,7 +454,7 @@
       <widget class="QLineEdit" name="RP1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -464,7 +466,7 @@
       <widget class="QLineEdit" name="NN1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -476,7 +478,7 @@
       <widget class="QLineEdit" name="RPPL1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -488,7 +490,7 @@
       <widget class="QLineEdit" name="LPPL1">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -524,7 +526,7 @@
       <widget class="QLineEdit" name="NB6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -536,7 +538,7 @@
       <widget class="QLineEdit" name="D6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -548,7 +550,7 @@
       <widget class="QLineEdit" name="RP6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -560,7 +562,7 @@
       <widget class="QLineEdit" name="NN6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -572,7 +574,7 @@
       <widget class="QLineEdit" name="RPPL6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -584,7 +586,7 @@
       <widget class="QLineEdit" name="LPPL6">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -620,7 +622,7 @@
       <widget class="QLineEdit" name="NB2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -632,7 +634,7 @@
       <widget class="QLineEdit" name="D2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -644,7 +646,7 @@
       <widget class="QLineEdit" name="RP2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -656,7 +658,7 @@
       <widget class="QLineEdit" name="NN2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -668,7 +670,9 @@
       <widget class="QLineEdit" name="RPPL2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -680,7 +684,7 @@
       <widget class="QLineEdit" name="LPPL2">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -716,7 +720,7 @@
       <widget class="QLineEdit" name="NB5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -728,7 +732,7 @@
       <widget class="QLineEdit" name="D5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -740,7 +744,7 @@
       <widget class="QLineEdit" name="RP5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -752,7 +756,8 @@
       <widget class="QLineEdit" name="NN5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -764,7 +769,7 @@
       <widget class="QLineEdit" name="RPPL5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -776,7 +781,7 @@
       <widget class="QLineEdit" name="LPPL5">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -789,15 +794,15 @@
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>50</y>
+      <x>510</x>
+      <y>30</y>
       <width>91</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>30</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
@@ -818,7 +823,7 @@
       <widget class="QLabel" name="label_9">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -830,7 +835,7 @@
       <widget class="QLabel" name="NB">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -842,7 +847,7 @@
       <widget class="QLabel" name="label_10">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -854,7 +859,7 @@
       <widget class="QLabel" name="label_12">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -866,7 +871,7 @@
       <widget class="QLabel" name="label_13">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -878,7 +883,7 @@
       <widget class="QLabel" name="label_14">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -890,7 +895,7 @@
       <widget class="QLabel" name="label_15">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -909,6 +914,11 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>Salir</string>
     </property>
@@ -924,7 +934,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
+      <pointsize>18</pointsize>
      </font>
     </property>
     <property name="text">
@@ -945,7 +955,7 @@
       <widget class="QLabel" name="label_18">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -957,7 +967,7 @@
       <widget class="QLineEdit" name="ValorH">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -969,7 +979,7 @@
       <widget class="QLineEdit" name="ValorS">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -981,7 +991,7 @@
       <widget class="QLabel" name="label_11">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1002,7 +1012,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -1023,7 +1033,7 @@
       <widget class="QLabel" name="label_19">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1035,7 +1045,7 @@
       <widget class="QLineEdit" name="CosteTotal">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1059,7 +1069,7 @@
       <widget class="QLabel" name="label_16">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1071,7 +1081,7 @@
       <widget class="QLineEdit" name="SS">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1095,7 +1105,7 @@
       <widget class="QLabel" name="label_20">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>12</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1107,7 +1117,7 @@
       <widget class="QLineEdit" name="Ts">
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1128,7 +1138,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>15</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -1146,12 +1156,48 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>25</pointsize>
+      <pointsize>18</pointsize>
      </font>
     </property>
     <property name="text">
      <string>Exportar archivo (.csv)</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_9">
+    <property name="geometry">
+     <rect>
+      <x>726</x>
+      <y>79</y>
+      <width>251</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <item>
+      <widget class="QLabel" name="label_21">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Porcentaje de defectuosos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Defectuosos">
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

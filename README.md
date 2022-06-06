@@ -1,1 +1,1 @@
-# MRP-CRP-Calculator
+Un programa con todas las librerias necesarias está en la carpeta Portable, es necesario un ordenador de 64 bits.

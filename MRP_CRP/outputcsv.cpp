@@ -18,7 +18,7 @@ void OutputCSV::crearCSV(GLOBAL Datos,QString filename){
     QTextStream stream(&file);
 
     // Primera linea
-    stream << " " << ",";
+    stream << "0" << ",";
     for (int i=1; i<=8; i++) stream << i << ",";
     stream << "\n";
 
@@ -56,6 +56,16 @@ void OutputCSV::crearCSV(GLOBAL Datos,QString filename){
     // Octava
     stream << "CT" <<",";
     stream << Valores["CT"][0] << ",";
+    stream << "\n";
+
+    // Novena
+    stream << "Ts" <<",";
+    stream << Valores["T"][0] << ",";
+    stream << "\n";
+
+    // Decima
+    stream << "Qej" <<",";
+    stream << Valores["Qej"][0] << ",";
     stream << "\n";
 
 

@@ -258,11 +258,13 @@ void MRP::on_Ejecutar_clicked()
     QString Ss = ui->SS->text(); string ss = Ss.toStdString();
     SS = stoi(ss);
 
-    //Adicionalmente inicializamos el valor de emisión de un lote y el coste de posesión por unidad y periodo
+    //Adicionalmente inicializamos el valor de emisión de un lote y el coste de posesión por unidad y periodo y el porcentaje de defectuosos
     QString Svalor = ui->ValorS->text(); string s = Svalor.toStdString();
     S = stoi(s);
     QString Hvalor = ui->ValorH->text(); string h = Hvalor.toStdString();
     H = stoi(h);
+    QString Def = ui->Defectuosos->text(); string def = Def.toStdString();
+    Defect = stof(def)/100;
 
     //A continuación presentamos los diferentes métodos de dimensionamientos en función de la elección del usuario
     if (N == "Lote a Lote")
@@ -335,6 +337,8 @@ void MRP::LaL(int a){
     }
     //Actualizamos el lanzamiento de los pedidos planificados
     int periodo= 1;
+    int dato2;
+    float dato, dato3;
     for (rppl= RPPL.begin(); rppl!= RPPL.end(); rppl++){
         if (periodo==1){
             for (int i=0; i<Ts; i++)
@@ -345,7 +349,7 @@ void MRP::LaL(int a){
             LPPL.push_back(0);
         }
         else {
-            LPPL.push_back(*rppl);
+            LPPL.push_back(round(*rppl/(1-Defect)));
         }
         periodo++;
     }
@@ -422,7 +426,7 @@ void MRP::PCTE(){
             disp = *d+*rp+*r-*nb;
             D.push_back(disp);
             RPPL.push_back(suma);
-            LPPL.push_back(suma);
+            LPPL.push_back(round((float)suma/(1-Defect)));
             if (suma > 0)
                 lotes++;
             nb++;
@@ -519,7 +523,7 @@ void MRP::EOQ(){
         d = D.end();    d--;
         if (*d < *it){
             RPPL.push_back(Q);
-            LPPL.push_back(Q);
+            LPPL.push_back(round((float)Q/(1-Defect)));
             lotes++;
         }
         //Si no se cumple la condición se añade un 0 a la RPPL y el LPPL
@@ -746,7 +750,7 @@ void MRP::POQ(){
         di = D.end();    di--;
         if (*di < *it){
             RPPL.push_back(Q);
-            LPPL.push_back(Q);
+            LPPL.push_back(round((float)Q/(1-Defect)));
             lotes++;
         }
         //Si no se cumple la condición se añade un 0 a la RPPL y el LPPL
@@ -831,7 +835,7 @@ void MRP::PF(){
             disp = *d+*rp+*r-*nb;
             D.push_back(disp);
             RPPL.push_back(suma);
-            LPPL.push_back(suma);
+            LPPL.push_back(round((float)suma/(1-Defect)));
             if (suma > 0)
                 lotes++;
             nb++;
@@ -947,7 +951,7 @@ void MRP::MCU(){
             disp = *di+*rp+*r-*nb;
             D.push_back(disp);
             RPPL.push_back(Q1);
-            LPPL.push_back(Q1);
+            LPPL.push_back(round((float)Q1/(1-Defect)));
             nb++;
             rp++;
             Q -= Q1;
@@ -976,7 +980,7 @@ void MRP::MCU(){
     disp = *di+*rp+*r-*nb;
     D.push_back(disp);
     RPPL.push_back(Q);
-    LPPL.push_back(Q);
+    LPPL.push_back(round((float)Q/(1-Defect)));
 
     //Al final se eliminan los ceros adicionales o se añaden en caso de necesidad
     while (RPPL.size() != 8){
@@ -1068,7 +1072,7 @@ void MRP::MCT(){
             disp = *di+*rp+*r-*nb;
             D.push_back(disp);
             RPPL.push_back(Q1);
-            LPPL.push_back(Q1);
+            LPPL.push_back(round((float)Q1/(1-Defect)));
             nb++;
             rp++;
             Q -= Q1;
@@ -1097,7 +1101,7 @@ void MRP::MCT(){
     disp = *di+*rp+*r-*nb;
     D.push_back(disp);
     RPPL.push_back(Q);
-    LPPL.push_back(Q);
+    LPPL.push_back(round((float)Q/(1-Defect)));
     nb++;
     rp++;
     di = D.end();    di--;
@@ -1194,7 +1198,7 @@ void MRP::SM(){
             disp = *di+*rp+*r-*nb;
             D.push_back(disp);
             RPPL.push_back(Q1);
-            LPPL.push_back(Q1);
+            LPPL.push_back(round((float)Q1/(1-Defect)));
             nb++;
             rp++;
             Q -= Q1;
@@ -1223,7 +1227,7 @@ void MRP::SM(){
     disp = *di+*rp+*r-*nb;
     D.push_back(disp);
     RPPL.push_back(Q);
-    LPPL.push_back(Q);
+    LPPL.push_back(round((float)Q/(1-Defect)));
     nb++;
     rp++;
     di = D.end();    di--;
@@ -1268,6 +1272,7 @@ void MRP::on_pushButton_CRP_clicked()
     //for (int i=0; i<=8; i++) if (LPP[i]!=0) Qej=LPP[i];
     while (LPP[i]==0) i++;
     Qej=LPP[i];
+    // cout << Qej << endl;
 
     CRP m(Ts,LPP,Qej,this);
     m.setModal(true);
@@ -1284,10 +1289,37 @@ void MRP::on_Exportar_clicked()
     RPPLP Rpplp;
     LPPLP Lpplp;
 
+    vector<QString> Ts(1,0);
+    Ts[0]=ui->Ts->text();
+
+    int i=0,k=0,QejInt;
+    vector<QString> Qej(1,0);
+
+    vector<int> LPP(8,0);
+    LPP[0]=ui->LPPL1->text().toInt();
+    LPP[1]=ui->LPPL2->text().toInt();
+    LPP[2]=ui->LPPL3->text().toInt();
+    LPP[3]=ui->LPPL4->text().toInt();
+    LPP[4]=ui->LPPL5->text().toInt();
+    LPP[5]=ui->LPPL6->text().toInt();
+    LPP[6]=ui->LPPL7->text().toInt();
+    LPP[7]=ui->LPPL8->text().toInt();
+
+    for (i=0;i<=7;i++){
+        if (LPP[i]!=0){
+            QejInt=QejInt+LPP[i];
+            k++;
+        }
+    }
+    QejInt=QejInt/k;
+
+    Qej[0]=QString::number(QejInt);
+
+
     vector<QString> Ctp = {ui->CosteTotal->text()};
 //  GLOBAL csv(Nbp.getValor(),Dp.getValor(),Rpp.getValor(),Nnp.getValor(),Rpplp.getValor(),Lpplp.getValor(),Ctp);
 
-    GLOBAL csv(Extraer_NB(),Extraer_D(),Extraer_RP(),Extraer_NN(),Extraer_RPPL(),Extraer_LPPL(),Ctp);
+    GLOBAL csv(Extraer_NB(),Extraer_D(),Extraer_RP(),Extraer_NN(),Extraer_RPPL(),Extraer_LPPL(),Ctp,Ts,Qej);
     OutputCSV Salida;
     QString filename= QFileDialog::getSaveFileName(this, tr("Guardar como"),"",tr("Archivo .csv (*.csv);;"));
     Salida.crearCSV(csv,filename);

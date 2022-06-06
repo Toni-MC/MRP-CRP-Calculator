@@ -134,6 +134,10 @@ public:
     QLineEdit *Ts;
     QPushButton *pushButton_CRP;
     QPushButton *Exportar;
+    QWidget *layoutWidget_9;
+    QVBoxLayout *verticalLayout_13;
+    QLabel *label_21;
+    QLineEdit *Defectuosos;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -163,37 +167,39 @@ public:
 
         NB4 = new QLineEdit(layoutWidget_3);
         NB4->setObjectName(QString::fromUtf8("NB4"));
-        NB4->setFont(font);
+        QFont font1;
+        font1.setPointSize(13);
+        NB4->setFont(font1);
 
         verticalLayout_4->addWidget(NB4);
 
         D4 = new QLineEdit(layoutWidget_3);
         D4->setObjectName(QString::fromUtf8("D4"));
-        D4->setFont(font);
+        D4->setFont(font1);
 
         verticalLayout_4->addWidget(D4);
 
         RP4 = new QLineEdit(layoutWidget_3);
         RP4->setObjectName(QString::fromUtf8("RP4"));
-        RP4->setFont(font);
+        RP4->setFont(font1);
 
         verticalLayout_4->addWidget(RP4);
 
         NN4 = new QLineEdit(layoutWidget_3);
         NN4->setObjectName(QString::fromUtf8("NN4"));
-        NN4->setFont(font);
+        NN4->setFont(font1);
 
         verticalLayout_4->addWidget(NN4);
 
         RPPL4 = new QLineEdit(layoutWidget_3);
         RPPL4->setObjectName(QString::fromUtf8("RPPL4"));
-        RPPL4->setFont(font);
+        RPPL4->setFont(font1);
 
         verticalLayout_4->addWidget(RPPL4);
 
         LPPL4 = new QLineEdit(layoutWidget_3);
         LPPL4->setObjectName(QString::fromUtf8("LPPL4"));
-        LPPL4->setFont(font);
+        LPPL4->setFont(font1);
 
         verticalLayout_4->addWidget(LPPL4);
 
@@ -211,37 +217,37 @@ public:
 
         NB3 = new QLineEdit(layoutWidget_2);
         NB3->setObjectName(QString::fromUtf8("NB3"));
-        NB3->setFont(font);
+        NB3->setFont(font1);
 
         verticalLayout_3->addWidget(NB3);
 
         D3 = new QLineEdit(layoutWidget_2);
         D3->setObjectName(QString::fromUtf8("D3"));
-        D3->setFont(font);
+        D3->setFont(font1);
 
         verticalLayout_3->addWidget(D3);
 
         RP3 = new QLineEdit(layoutWidget_2);
         RP3->setObjectName(QString::fromUtf8("RP3"));
-        RP3->setFont(font);
+        RP3->setFont(font1);
 
         verticalLayout_3->addWidget(RP3);
 
         NN3 = new QLineEdit(layoutWidget_2);
         NN3->setObjectName(QString::fromUtf8("NN3"));
-        NN3->setFont(font);
+        NN3->setFont(font1);
 
         verticalLayout_3->addWidget(NN3);
 
         RPPL3 = new QLineEdit(layoutWidget_2);
         RPPL3->setObjectName(QString::fromUtf8("RPPL3"));
-        RPPL3->setFont(font);
+        RPPL3->setFont(font1);
 
         verticalLayout_3->addWidget(RPPL3);
 
         LPPL3 = new QLineEdit(layoutWidget_2);
         LPPL3->setObjectName(QString::fromUtf8("LPPL3"));
-        LPPL3->setFont(font);
+        LPPL3->setFont(font1);
 
         verticalLayout_3->addWidget(LPPL3);
 
@@ -259,37 +265,41 @@ public:
 
         NB8 = new QLineEdit(layoutWidget_7);
         NB8->setObjectName(QString::fromUtf8("NB8"));
-        NB8->setFont(font);
+        QFont font2;
+        font2.setPointSize(13);
+        font2.setBold(false);
+        font2.setWeight(50);
+        NB8->setFont(font2);
 
         verticalLayout_8->addWidget(NB8);
 
         D8 = new QLineEdit(layoutWidget_7);
         D8->setObjectName(QString::fromUtf8("D8"));
-        D8->setFont(font);
+        D8->setFont(font1);
 
         verticalLayout_8->addWidget(D8);
 
         RP8 = new QLineEdit(layoutWidget_7);
         RP8->setObjectName(QString::fromUtf8("RP8"));
-        RP8->setFont(font);
+        RP8->setFont(font1);
 
         verticalLayout_8->addWidget(RP8);
 
         NN8 = new QLineEdit(layoutWidget_7);
         NN8->setObjectName(QString::fromUtf8("NN8"));
-        NN8->setFont(font);
+        NN8->setFont(font1);
 
         verticalLayout_8->addWidget(NN8);
 
         RPPL8 = new QLineEdit(layoutWidget_7);
         RPPL8->setObjectName(QString::fromUtf8("RPPL8"));
-        RPPL8->setFont(font);
+        RPPL8->setFont(font1);
 
         verticalLayout_8->addWidget(RPPL8);
 
         LPPL8 = new QLineEdit(layoutWidget_7);
         LPPL8->setObjectName(QString::fromUtf8("LPPL8"));
-        LPPL8->setFont(font);
+        LPPL8->setFont(font1);
 
         verticalLayout_8->addWidget(LPPL8);
 
@@ -307,37 +317,37 @@ public:
 
         NB7 = new QLineEdit(layoutWidget_6);
         NB7->setObjectName(QString::fromUtf8("NB7"));
-        NB7->setFont(font);
+        NB7->setFont(font1);
 
         verticalLayout_7->addWidget(NB7);
 
         D7 = new QLineEdit(layoutWidget_6);
         D7->setObjectName(QString::fromUtf8("D7"));
-        D7->setFont(font);
+        D7->setFont(font1);
 
         verticalLayout_7->addWidget(D7);
 
         RP7 = new QLineEdit(layoutWidget_6);
         RP7->setObjectName(QString::fromUtf8("RP7"));
-        RP7->setFont(font);
+        RP7->setFont(font1);
 
         verticalLayout_7->addWidget(RP7);
 
         NN7 = new QLineEdit(layoutWidget_6);
         NN7->setObjectName(QString::fromUtf8("NN7"));
-        NN7->setFont(font);
+        NN7->setFont(font1);
 
         verticalLayout_7->addWidget(NN7);
 
         RPPL7 = new QLineEdit(layoutWidget_6);
         RPPL7->setObjectName(QString::fromUtf8("RPPL7"));
-        RPPL7->setFont(font);
+        RPPL7->setFont(font1);
 
         verticalLayout_7->addWidget(RPPL7);
 
         LPPL7 = new QLineEdit(layoutWidget_6);
         LPPL7->setObjectName(QString::fromUtf8("LPPL7"));
-        LPPL7->setFont(font);
+        LPPL7->setFont(font1);
 
         verticalLayout_7->addWidget(LPPL7);
 
@@ -355,37 +365,37 @@ public:
 
         NB1 = new QLineEdit(layoutWidget);
         NB1->setObjectName(QString::fromUtf8("NB1"));
-        NB1->setFont(font);
+        NB1->setFont(font1);
 
         verticalLayout->addWidget(NB1);
 
         D1 = new QLineEdit(layoutWidget);
         D1->setObjectName(QString::fromUtf8("D1"));
-        D1->setFont(font);
+        D1->setFont(font1);
 
         verticalLayout->addWidget(D1);
 
         RP1 = new QLineEdit(layoutWidget);
         RP1->setObjectName(QString::fromUtf8("RP1"));
-        RP1->setFont(font);
+        RP1->setFont(font1);
 
         verticalLayout->addWidget(RP1);
 
         NN1 = new QLineEdit(layoutWidget);
         NN1->setObjectName(QString::fromUtf8("NN1"));
-        NN1->setFont(font);
+        NN1->setFont(font1);
 
         verticalLayout->addWidget(NN1);
 
         RPPL1 = new QLineEdit(layoutWidget);
         RPPL1->setObjectName(QString::fromUtf8("RPPL1"));
-        RPPL1->setFont(font);
+        RPPL1->setFont(font1);
 
         verticalLayout->addWidget(RPPL1);
 
         LPPL1 = new QLineEdit(layoutWidget);
         LPPL1->setObjectName(QString::fromUtf8("LPPL1"));
-        LPPL1->setFont(font);
+        LPPL1->setFont(font1);
 
         verticalLayout->addWidget(LPPL1);
 
@@ -403,37 +413,37 @@ public:
 
         NB6 = new QLineEdit(layoutWidget_5);
         NB6->setObjectName(QString::fromUtf8("NB6"));
-        NB6->setFont(font);
+        NB6->setFont(font1);
 
         verticalLayout_6->addWidget(NB6);
 
         D6 = new QLineEdit(layoutWidget_5);
         D6->setObjectName(QString::fromUtf8("D6"));
-        D6->setFont(font);
+        D6->setFont(font1);
 
         verticalLayout_6->addWidget(D6);
 
         RP6 = new QLineEdit(layoutWidget_5);
         RP6->setObjectName(QString::fromUtf8("RP6"));
-        RP6->setFont(font);
+        RP6->setFont(font1);
 
         verticalLayout_6->addWidget(RP6);
 
         NN6 = new QLineEdit(layoutWidget_5);
         NN6->setObjectName(QString::fromUtf8("NN6"));
-        NN6->setFont(font);
+        NN6->setFont(font1);
 
         verticalLayout_6->addWidget(NN6);
 
         RPPL6 = new QLineEdit(layoutWidget_5);
         RPPL6->setObjectName(QString::fromUtf8("RPPL6"));
-        RPPL6->setFont(font);
+        RPPL6->setFont(font1);
 
         verticalLayout_6->addWidget(RPPL6);
 
         LPPL6 = new QLineEdit(layoutWidget_5);
         LPPL6->setObjectName(QString::fromUtf8("LPPL6"));
-        LPPL6->setFont(font);
+        LPPL6->setFont(font1);
 
         verticalLayout_6->addWidget(LPPL6);
 
@@ -451,37 +461,37 @@ public:
 
         NB2 = new QLineEdit(layoutWidget_4);
         NB2->setObjectName(QString::fromUtf8("NB2"));
-        NB2->setFont(font);
+        NB2->setFont(font1);
 
         verticalLayout_2->addWidget(NB2);
 
         D2 = new QLineEdit(layoutWidget_4);
         D2->setObjectName(QString::fromUtf8("D2"));
-        D2->setFont(font);
+        D2->setFont(font1);
 
         verticalLayout_2->addWidget(D2);
 
         RP2 = new QLineEdit(layoutWidget_4);
         RP2->setObjectName(QString::fromUtf8("RP2"));
-        RP2->setFont(font);
+        RP2->setFont(font1);
 
         verticalLayout_2->addWidget(RP2);
 
         NN2 = new QLineEdit(layoutWidget_4);
         NN2->setObjectName(QString::fromUtf8("NN2"));
-        NN2->setFont(font);
+        NN2->setFont(font1);
 
         verticalLayout_2->addWidget(NN2);
 
         RPPL2 = new QLineEdit(layoutWidget_4);
         RPPL2->setObjectName(QString::fromUtf8("RPPL2"));
-        RPPL2->setFont(font);
+        RPPL2->setFont(font2);
 
         verticalLayout_2->addWidget(RPPL2);
 
         LPPL2 = new QLineEdit(layoutWidget_4);
         LPPL2->setObjectName(QString::fromUtf8("LPPL2"));
-        LPPL2->setFont(font);
+        LPPL2->setFont(font1);
 
         verticalLayout_2->addWidget(LPPL2);
 
@@ -499,46 +509,49 @@ public:
 
         NB5 = new QLineEdit(layoutWidget_8);
         NB5->setObjectName(QString::fromUtf8("NB5"));
-        NB5->setFont(font);
+        NB5->setFont(font1);
 
         verticalLayout_5->addWidget(NB5);
 
         D5 = new QLineEdit(layoutWidget_8);
         D5->setObjectName(QString::fromUtf8("D5"));
-        D5->setFont(font);
+        D5->setFont(font1);
 
         verticalLayout_5->addWidget(D5);
 
         RP5 = new QLineEdit(layoutWidget_8);
         RP5->setObjectName(QString::fromUtf8("RP5"));
-        RP5->setFont(font);
+        RP5->setFont(font1);
 
         verticalLayout_5->addWidget(RP5);
 
         NN5 = new QLineEdit(layoutWidget_8);
         NN5->setObjectName(QString::fromUtf8("NN5"));
-        NN5->setFont(font);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("MS Shell Dlg 2"));
+        font3.setPointSize(13);
+        NN5->setFont(font3);
 
         verticalLayout_5->addWidget(NN5);
 
         RPPL5 = new QLineEdit(layoutWidget_8);
         RPPL5->setObjectName(QString::fromUtf8("RPPL5"));
-        RPPL5->setFont(font);
+        RPPL5->setFont(font1);
 
         verticalLayout_5->addWidget(RPPL5);
 
         LPPL5 = new QLineEdit(layoutWidget_8);
         LPPL5->setObjectName(QString::fromUtf8("LPPL5"));
-        LPPL5->setFont(font);
+        LPPL5->setFont(font1);
 
         verticalLayout_5->addWidget(LPPL5);
 
         label_17 = new QLabel(centralwidget);
         label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(540, 50, 91, 61));
-        QFont font1;
-        font1.setPointSize(30);
-        label_17->setFont(font1);
+        label_17->setGeometry(QRect(510, 30, 91, 61));
+        QFont font4;
+        font4.setPointSize(20);
+        label_17->setFont(font4);
         layoutWidget_10 = new QWidget(centralwidget);
         layoutWidget_10->setObjectName(QString::fromUtf8("layoutWidget_10"));
         layoutWidget_10->setGeometry(QRect(20, 190, 319, 271));
@@ -547,55 +560,60 @@ public:
         verticalLayout_9->setContentsMargins(0, 0, 0, 0);
         label_9 = new QLabel(layoutWidget_10);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setFont(font);
+        QFont font5;
+        font5.setPointSize(12);
+        label_9->setFont(font5);
 
         verticalLayout_9->addWidget(label_9);
 
         NB = new QLabel(layoutWidget_10);
         NB->setObjectName(QString::fromUtf8("NB"));
-        NB->setFont(font);
+        NB->setFont(font5);
 
         verticalLayout_9->addWidget(NB);
 
         label_10 = new QLabel(layoutWidget_10);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setFont(font);
+        label_10->setFont(font5);
 
         verticalLayout_9->addWidget(label_10);
 
         label_12 = new QLabel(layoutWidget_10);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font);
+        label_12->setFont(font5);
 
         verticalLayout_9->addWidget(label_12);
 
         label_13 = new QLabel(layoutWidget_10);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setFont(font);
+        label_13->setFont(font5);
 
         verticalLayout_9->addWidget(label_13);
 
         label_14 = new QLabel(layoutWidget_10);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setFont(font);
+        label_14->setFont(font5);
 
         verticalLayout_9->addWidget(label_14);
 
         label_15 = new QLabel(layoutWidget_10);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setFont(font);
+        label_15->setFont(font5);
 
         verticalLayout_9->addWidget(label_15);
 
         Salir = new QCommandLinkButton(centralwidget);
         Salir->setObjectName(QString::fromUtf8("Salir"));
         Salir->setGeometry(QRect(1220, 580, 71, 41));
+        QFont font6;
+        font6.setPointSize(7);
+        Salir->setFont(font6);
         pushButton_Excel = new QPushButton(centralwidget);
         pushButton_Excel->setObjectName(QString::fromUtf8("pushButton_Excel"));
         pushButton_Excel->setGeometry(QRect(230, 560, 351, 71));
-        QFont font2;
-        font2.setPointSize(25);
-        pushButton_Excel->setFont(font2);
+        QFont font7;
+        font7.setPointSize(18);
+        pushButton_Excel->setFont(font7);
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(20, 470, 781, 81));
@@ -604,32 +622,32 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         label_18 = new QLabel(layoutWidget1);
         label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setFont(font);
+        label_18->setFont(font5);
 
         gridLayout->addWidget(label_18, 0, 1, 1, 1);
 
         ValorH = new QLineEdit(layoutWidget1);
         ValorH->setObjectName(QString::fromUtf8("ValorH"));
-        ValorH->setFont(font);
+        ValorH->setFont(font5);
 
         gridLayout->addWidget(ValorH, 1, 1, 1, 1);
 
         ValorS = new QLineEdit(layoutWidget1);
         ValorS->setObjectName(QString::fromUtf8("ValorS"));
-        ValorS->setFont(font);
+        ValorS->setFont(font5);
 
         gridLayout->addWidget(ValorS, 1, 0, 1, 1);
 
         label_11 = new QLabel(layoutWidget1);
         label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setFont(font);
+        label_11->setFont(font5);
 
         gridLayout->addWidget(label_11, 0, 0, 1, 1);
 
         Ejecutar = new QPushButton(centralwidget);
         Ejecutar->setObjectName(QString::fromUtf8("Ejecutar"));
         Ejecutar->setGeometry(QRect(990, 80, 121, 71));
-        Ejecutar->setFont(font);
+        Ejecutar->setFont(font1);
         layoutWidget2 = new QWidget(centralwidget);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
         layoutWidget2->setGeometry(QRect(900, 480, 301, 71));
@@ -638,13 +656,13 @@ public:
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
         label_19 = new QLabel(layoutWidget2);
         label_19->setObjectName(QString::fromUtf8("label_19"));
-        label_19->setFont(font);
+        label_19->setFont(font5);
 
         verticalLayout_11->addWidget(label_19);
 
         CosteTotal = new QLineEdit(layoutWidget2);
         CosteTotal->setObjectName(QString::fromUtf8("CosteTotal"));
-        CosteTotal->setFont(font);
+        CosteTotal->setFont(font5);
 
         verticalLayout_11->addWidget(CosteTotal);
 
@@ -656,13 +674,13 @@ public:
         verticalLayout_10->setContentsMargins(0, 0, 0, 0);
         label_16 = new QLabel(layoutWidget3);
         label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setFont(font);
+        label_16->setFont(font5);
 
         verticalLayout_10->addWidget(label_16);
 
         SS = new QLineEdit(layoutWidget3);
         SS->setObjectName(QString::fromUtf8("SS"));
-        SS->setFont(font);
+        SS->setFont(font1);
 
         verticalLayout_10->addWidget(SS);
 
@@ -674,24 +692,42 @@ public:
         verticalLayout_12->setContentsMargins(0, 0, 0, 0);
         label_20 = new QLabel(layoutWidget4);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setFont(font);
+        label_20->setFont(font5);
 
         verticalLayout_12->addWidget(label_20);
 
         Ts = new QLineEdit(layoutWidget4);
         Ts->setObjectName(QString::fromUtf8("Ts"));
-        Ts->setFont(font);
+        Ts->setFont(font1);
 
         verticalLayout_12->addWidget(Ts);
 
         pushButton_CRP = new QPushButton(centralwidget);
         pushButton_CRP->setObjectName(QString::fromUtf8("pushButton_CRP"));
         pushButton_CRP->setGeometry(QRect(1130, 80, 121, 71));
-        pushButton_CRP->setFont(font);
+        pushButton_CRP->setFont(font1);
         Exportar = new QPushButton(centralwidget);
         Exportar->setObjectName(QString::fromUtf8("Exportar"));
         Exportar->setGeometry(QRect(610, 560, 351, 71));
-        Exportar->setFont(font2);
+        Exportar->setFont(font7);
+        layoutWidget_9 = new QWidget(centralwidget);
+        layoutWidget_9->setObjectName(QString::fromUtf8("layoutWidget_9"));
+        layoutWidget_9->setGeometry(QRect(726, 79, 251, 71));
+        verticalLayout_13 = new QVBoxLayout(layoutWidget_9);
+        verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
+        verticalLayout_13->setContentsMargins(0, 0, 0, 0);
+        label_21 = new QLabel(layoutWidget_9);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setFont(font5);
+
+        verticalLayout_13->addWidget(label_21);
+
+        Defectuosos = new QLineEdit(layoutWidget_9);
+        Defectuosos->setObjectName(QString::fromUtf8("Defectuosos"));
+        Defectuosos->setFont(font1);
+
+        verticalLayout_13->addWidget(Defectuosos);
+
         MRP->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MRP);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -788,6 +824,8 @@ public:
         Ts->setText(QApplication::translate("MRP", "1", nullptr));
         pushButton_CRP->setText(QApplication::translate("MRP", "CRP", nullptr));
         Exportar->setText(QApplication::translate("MRP", "Exportar archivo (.csv)", nullptr));
+        label_21->setText(QApplication::translate("MRP", "Porcentaje de defectuosos", nullptr));
+        Defectuosos->setText(QApplication::translate("MRP", "20", nullptr));
     } // retranslateUi
 
 };

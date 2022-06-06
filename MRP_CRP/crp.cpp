@@ -329,6 +329,7 @@ void CRP::on_pushButton_ExcelA_clicked()
     vector<QString> PPL;
     vector<QString> row(9);
 
+    int k;
     string line, word;
 
     QFile file (filename);
@@ -345,11 +346,21 @@ void CRP::on_pushButton_ExcelA_clicked()
         // row= line.split(',').toVector().toStdVector();
 
         QVector<QString> rowaux=line.split(',').toVector();
-        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
+        //cout << rowaux.size()<< endl;
+
+        if (rowaux.size()==9) k=0;
+        if (rowaux.size()==10) k=1;
+
+        for (int i=0; i<rowaux.size()-k;i++) {
+            row[i]=rowaux[i];
+            //cout << i << ": ";
+            //cout << row[i].toStdString() << endl;
+        }
+        //cout << row[0].toStdString() << endl;
 
         if (row[0]=="Ts")       Ts=row;
         if (row[0]=="Qej")      Qej=row;
-        if (row[0]=="PPL")      PPL=row;
+        if (row[0]=="LPPL")     PPL=row;
 
     }
     // Ts
@@ -380,10 +391,12 @@ void CRP::on_pushButton_ExcelB_clicked()
     vector<QString> Qej;
     vector<QString> PPL;
     vector<QString> row(9);
+    int k;
 
     string line, word;
 
     QFile file (filename);
+
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
@@ -397,11 +410,21 @@ void CRP::on_pushButton_ExcelB_clicked()
         // row= line.split(',').toVector().toStdVector();
 
         QVector<QString> rowaux=line.split(',').toVector();
-        for (int i=0; i<rowaux.size();i++) row[i]=rowaux[i];
+        //cout << rowaux.size()<< endl;
+        if (rowaux.size()==9) k=0;
+        if (rowaux.size()==10) k=1;
+
+        cout << endl;
+        for (int i=0; i<rowaux.size()-k;i++) {
+            row[i]=rowaux[i];
+            //cout << i << ": ";
+            //cout << row[i].toStdString() << endl;
+        }
+        //cout << row[0].toStdString() << endl;
 
         if (row[0]=="Ts")       Ts=row;
         if (row[0]=="Qej")      Qej=row;
-        if (row[0]=="PPL")      PPL=row;
+        if (row[0]=="LPPL")     PPL=row;
 
     }
     // Ts

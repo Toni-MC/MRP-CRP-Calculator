@@ -2,12 +2,12 @@
 #define MRP_H
 
 #include <QMainWindow>
-#include <QtSql>
 #include <QInputDialog>
 #include <QFileDialog>
 #include <iostream>
 #include <list>
 #include <QFile>
+#include <math.h>
 
 // .csv in/out
 #include <fstream>
@@ -33,6 +33,7 @@ public:
 
     list<int> NN,RPPL,LPPL,D,RP, NB;
     int Ts, SS, S, H, Lote;
+    float Defect;
 
 protected slots:
     vector<QString> Extraer_NB();
